@@ -1,12 +1,10 @@
-import React, { useRef, useState, useEffect } from 'react';
+import React, { useRef, useState } from 'react';
 import styled from 'styled-components';
 import { Box, Paper, Stack } from '@mui/material';
 import 'slick-carousel/slick/slick.css';
 import 'slick-carousel/slick/slick-theme.css';
 import Slider from 'react-slick';
-import ArrowBackIosIcon from '@mui/icons-material/ArrowBackIos';
-import ArrowForwardIosIcon from '@mui/icons-material/ArrowForwardIos';
-import VideoOpenSeaButton from '../components/VideoOpenSeaButton'
+import VideoOpenSeaButton from '../components/Button/VideoOpenSeaButton'
 
 const StyledSlider = styled(Slider)`
 .slick-dots li.slick-active button:before {
@@ -15,16 +13,6 @@ const StyledSlider = styled(Slider)`
 `;
 
 const VideoSection: React.FC = () => {
-  const slider1 = useRef<Slider | null>(null);
-  const [nav1, setNav1] = useState<Slider | null>(null);
-  console.log(nav1);
-  console.log(slider1);
-  const [test, setTest] = useState({
-    oldSlide: 0,
-    activeSlide: 0,
-    activeSlide2: 0
-  });
-
   const video = `${process.env.PUBLIC_URL}/videos/test.mp4`
   const videos = [video, video, video, video, video, video];
 
@@ -35,7 +23,6 @@ const VideoSection: React.FC = () => {
     slidesToShow: 1,
     slidesToScroll: 1,
   };
-
 
   return (
     <div className="App-section">
@@ -59,17 +46,25 @@ const VideoSection: React.FC = () => {
                   }}>
                   <Stack direction="row">
                     <video src={video} width="400px" autoPlay muted loop />
-                    <Box sx={{
-                      p: 3, width: "380px", backgroundColor: 'primary.dark',
-                    }}>
-                      여기 설명을 적을거라구
-                    </Box>
+                    <Stack
+                      direction="column"
+                      justifyContent="space-between"
+                      alignItems="center"
+                      width="100%"
+                    >
+                      <Box sx={{
+                        backgroundColor: 'primary.dark',
+                        fontSize: '15px'
+                      }}>
+                        여기 설명을 적을거라구
+                      </Box>
+                      <VideoOpenSeaButton url={'https://opensea.io/'} />
+                    </Stack>
                   </Stack>
                 </Paper>
               )
             })}
           </StyledSlider>
-          {/* <VideoOpenSeaButton url={'https://opensea.io/'} /> */}
         </Box>
       </Box>
     </div >

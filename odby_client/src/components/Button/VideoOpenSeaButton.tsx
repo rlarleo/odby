@@ -6,8 +6,8 @@ type ButtonProps = {
 
 const VideoOpenSeaButton: React.FC<ButtonProps> = ({ url }) => {
   const [isListHover, setIsListHover] = useState(false);
-  const image1 = `${process.env.PUBLIC_URL}/logo192.png`
-  const image2 = `${process.env.PUBLIC_URL}/logo193.png`
+  const image1 = `${process.env.PUBLIC_URL}/images/OpenSeaButton.png`
+  const image2 = `${process.env.PUBLIC_URL}/images/OpenSeaButton_on.png`
   return (
     <div
       className='App-button'
@@ -17,6 +17,7 @@ const VideoOpenSeaButton: React.FC<ButtonProps> = ({ url }) => {
       <img
         src={isListHover ? image1 : image2}
         alt=""
+        width="200px"
         onClick={() => window.open(url, '_blank')}
       />
     </div>

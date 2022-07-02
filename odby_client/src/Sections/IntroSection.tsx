@@ -1,7 +1,7 @@
 import React from 'react';
 
 const IntroSection: React.FC = () => {
-  const image = `${process.env.PUBLIC_URL}/logo192.png`
+  const image = `${process.env.PUBLIC_URL}/images/OddLogo.jpg`
   return (
     <div className="App-section">
       <img src={image} className="App-logo" alt="logo" />

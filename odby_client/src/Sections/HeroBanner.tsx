@@ -1,9 +1,19 @@
-import React from 'react';
+import React, { useEffect } from 'react';
 import { Box, Stack } from '@mui/material';
-import OpenSeaButton from '../components/OpenSeaButton';
-import InstagramButton from '../components/InstagramButton';
+import PageLogo from '../components/Image/PageLogo';
+import OpenSeaButton from '../components/Button/OpenSeaButton';
+import InstagramButton from '../components/Button/InstagramButton';
+import TwitterButton from '../components/Button/TwitterButton';
+import Axios from 'axios';
 
 const HeroBanner: React.FC = () => {
+  useEffect(() => {
+    console.log('hi');
+    Axios.get("http://localhost:5000/user")
+      .then((res) => {
+        console.log(res)
+      });
+  }, [])
   return (
     <header className="App-header">
       <Box
@@ -11,7 +21,7 @@ const HeroBanner: React.FC = () => {
           width: '100%',
           height: '100vh',
           backgroundSize: '100%',
-          backgroundImage: `url(${`${process.env.PUBLIC_URL}/bannerImage.png`})`,
+          backgroundImage: `url(${`${process.env.PUBLIC_URL}/images/Banner.jpg`})`,
           backgroundRepeat: 'no-repeat',
           verticalAlign: 'middle'
         }}
@@ -26,11 +36,10 @@ const HeroBanner: React.FC = () => {
             height: '100vh'
           }}
         >
-          <div>dsakfsda</div>
-          <div>dsakfsda</div>
-          <div>dsakfsda</div>
+          <PageLogo />
           <OpenSeaButton />
           <InstagramButton />
+          <TwitterButton />
         </Stack>
       </Box>
 
