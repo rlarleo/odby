@@ -10,7 +10,7 @@ const db = new sqlite3.Database('./db/test.db', sqlite3.OPEN_READWRITE, (err) =>
   }
 });
 
-router.get('/user', function (req, res, next) {
+router.get('/api/user', function (req, res, next) {
   const sql = `SELECT * FROM person`;
   db.serialize();
   db.get(sql, (err, row)=>{

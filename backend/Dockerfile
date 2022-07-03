@@ -1,10 +1,12 @@
 FROM node:alpine
 
-COPY ./package.json ./
+WORKDIR /
+
+COPY package.json ./
 
 RUN npm install
 
-COPY ./ ./
+COPY . .
 
 #nodemon 사용 
 CMD ["npm", "run", "start"]

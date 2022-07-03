@@ -26,8 +26,8 @@ services:
   backend:
     build:
       dockerfile: Dockerfile.dev
-      context: ./frontend
-    #container_name: app_backend
+      context: ./backend
+    container_name: app_backend
     volumes:
       - /app/node_modules
-      - ./frontend:/app
+      - ./backend:/app
