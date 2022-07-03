@@ -9,7 +9,7 @@ import Axios from 'axios';
 const HeroBanner: React.FC = () => {
   useEffect(() => {
     console.log('hi');
-    Axios.get("http://localhost:5000/api/user")
+    Axios.get(`/api/user`)
       .then((res) => {
         console.log(res)
       });
