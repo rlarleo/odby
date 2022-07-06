@@ -1,7 +1,7 @@
 import React from 'react';
 
 const PageLogo: React.FC = () => {
-  const logo = `${process.env.PUBLIC_URL}/images/PageLogo.jpg`
+  const logo = `${process.env.PUBLIC_URL}/images/PageLogo.png`
   return (
     <img
       src={logo}

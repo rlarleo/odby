@@ -1,9 +1,9 @@
 import React, { useEffect } from 'react';
 import { Box, Stack } from '@mui/material';
-import PageLogo from '../components/Image/PageLogo';
-import OpenSeaButton from '../components/Button/OpenSeaButton';
-import InstagramButton from '../components/Button/InstagramButton';
-import TwitterButton from '../components/Button/TwitterButton';
+import PageLogo from '../component/Image/PageLogo';
+import OpenSeaButton from '../component/Button/OpenSeaButton';
+import InstagramButton from '../component/Button/InstagramButton';
+import TwitterButton from '../component/Button/TwitterButton';
 import Axios from 'axios';
 
 const HeroBanner: React.FC = () => {

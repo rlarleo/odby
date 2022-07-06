@@ -1,10 +1,10 @@
 import React, { useRef, useState } from 'react';
 import styled from 'styled-components';
 import { Box, Paper, Stack } from '@mui/material';
-import 'slick-carousel/slick/slick.css';
-import 'slick-carousel/slick/slick-theme.css';
+import '../slider/slick.css';
+import '../slider/slick-theme.css';
 import Slider from 'react-slick';
-import VideoOpenSeaButton from '../components/Button/VideoOpenSeaButton'
+import VideoOpenSeaButton from '../component/Button/VideoOpenSeaButton'
 
 const StyledSlider = styled(Slider)`
 .slick-dots li.slick-active button:before {

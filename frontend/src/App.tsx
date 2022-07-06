@@ -1,7 +1,7 @@
-import HeroBanner from './Sections/HeroBanner';
-import IntroSection from './Sections/IntroSection';
-import VideoSection from './Sections/VideoSection';
-import FootSection from './Sections/FootSection';
+import HeroBanner from './section/HeroBanner';
+import IntroSection from './section/IntroSection';
+import VideoSection from './section/VideoSection';
+import FootSection from './section/FootSection';
 import './App.css';
 import Axios from 'axios';
 
