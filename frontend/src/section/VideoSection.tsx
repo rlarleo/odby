@@ -25,7 +25,7 @@ const VideoSection: React.FC = () => {
   };
 
   return (
-    <div className="App-section">
+    <div className="App-video-section">
       <Box
         sx={{
           display: 'flex',
