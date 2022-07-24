@@ -1,4 +1,5 @@
 import React from 'react';
+import { isMobile } from 'react-device-detect';
 
 const PageLogo: React.FC = () => {
   const logo = `${process.env.PUBLIC_URL}/images/PageLogo.png`
@@ -9,7 +10,7 @@ const PageLogo: React.FC = () => {
       <img
         src={logo}
         alt=""
-        width="270px"
+        width={isMobile? '100px' : '270px'}
         onClick={() => window.open('https://www.instagram.com/', '_blank')}
       />
     </div>

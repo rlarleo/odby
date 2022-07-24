@@ -1,4 +1,5 @@
 import React, { useState } from 'react';
+import { Button } from '@mui/material';
 
 const InstagramButton: React.FC = () => {
   const [isListHover, setIsListHover] = useState(false);
@@ -10,12 +11,14 @@ const InstagramButton: React.FC = () => {
       onMouseEnter={() => setIsListHover(true)}
       onMouseLeave={() => setIsListHover(false)}
     >
-      <img
-        src={isListHover ? image1 : image2}
-        alt=""
-        width="300px"
+      <Button 
+        variant="text"
+        sx={{ color: "white", width: "300px", fontWeight: "bold" }}
+        size="large"
         onClick={() => window.open('https://www.instagram.com/', '_blank')}
-      />
+      >
+        About Us
+      </Button>
     </div>
   );
 };

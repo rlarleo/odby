@@ -37,7 +37,7 @@
 
 .App-video-section {
   background-color: #000000;
-  min-height: 50vh;
+  min-height: 100vh;
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -63,6 +63,33 @@
 
 .App-button {
   cursor: pointer;
+}
+
+.ODBYODD-BODY-OD {
+  height: 180px;
+  flex-grow: 0;
+  font-family: Pretendard;
+  font-size: calc(10px + 1vmin);
+  font-weight: 300;
+  font-stretch: normal;
+  font-style: normal;
+  line-height: 1.5;
+  letter-spacing: normal;
+  text-align: justify;
+  color: #fff;
+}
+
+.-ODBYODD-BODY- {
+  height: 360px;
+  font-family: Pretendard;
+  font-size: calc(10px + 1vmin);
+  font-weight: 500;
+  font-stretch: normal;
+  font-style: normal;
+  line-height: 1.5;
+  letter-spacing: normal;
+  text-align: justify;
+  color: #fff;
 }
 
 @keyframes App-logo-spin {

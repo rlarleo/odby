@@ -4,7 +4,9 @@ import AOS from 'aos';
 import HeroBanner from './section/HeroBanner';
 import IntroSection from './section/IntroSection';
 import VideoSection from './section/VideoSection';
+import BuySection from './section/BuySection';
 import FootSection from './section/FootSection';
+import GallerySection from './section/GallerySection';
 import './App.css';
 import Axios from 'axios';
 
@@ -23,6 +25,8 @@ function App() {
       <HeroBanner />
       <IntroSection />
       <VideoSection />
+      <BuySection />
+      <GallerySection />
       <FootSection />
     </div>
   );

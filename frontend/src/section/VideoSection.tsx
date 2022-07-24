@@ -10,6 +10,9 @@ const StyledSlider = styled(Slider)`
 .slick-dots li.slick-active button:before {
     color: white !important;
   }
+.slick-slide {
+  background-color: black;
+}
 `;
 
 const VideoSection: React.FC = () => {
@@ -25,27 +28,32 @@ const VideoSection: React.FC = () => {
   };
 
   return (
-    <div className="App-video-section">
+    <div id="2" className="App-video-section">
       <Box
         sx={{
           display: 'flex',
           flexWrap: 'wrap',
+          borderRadius: '12px',
         }}
       >
-        <Box sx={{ my: 1, width: '780px' }}>
+        <Box sx={{ my: 1, width: '80vw', borderRadius: '12px' }}>
           <StyledSlider {...settings}>
             {videos.map(element => {
               return (
-                <Paper
-                  variant="outlined"
-                  color="grey"
+                <Box
+                  width= "90% !important"
+                  justifyContent="center"
+                  alignItems="center"
                   sx={{
+                    backgroundColor: 'white',
                     textAlign: 'center',
-                    minHeight: '235px',
+                    minHeight: '60vh',
                     p: 2,
+                    borderRadius: '12px',
+                    paddingX: 0,
                   }}>
                   <Stack direction="row">
-                    <video src={video} width="400px" autoPlay muted loop />
+                    <video src={video} width="600px" autoPlay muted loop />
                     <Stack
                       direction="column"
                       justifyContent="space-between"
@@ -61,7 +69,7 @@ const VideoSection: React.FC = () => {
                       <VideoOpenSeaButton url={'https://opensea.io/'} />
                     </Stack>
                   </Stack>
-                </Paper>
+                </Box>
               )
             })}
           </StyledSlider>
