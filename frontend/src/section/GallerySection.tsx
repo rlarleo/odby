@@ -7,8 +7,8 @@ import Slider from 'react-slick';
 
 const GallerySection: React.FC = () => {
   return (
-    <div id="3" className="App-section">
-       <Box
+    <div id="3" className="App-video-section">
+       {/* <Box
         justifyContent="center"
         sx={{
           width: 800,
@@ -26,7 +26,7 @@ const GallerySection: React.FC = () => {
         <br /> 
         <br /> 
         메타버스 갤러리
-      </Box>
+      </Box> */}
     </div >
   );
 };

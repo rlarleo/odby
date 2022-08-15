@@ -26,7 +26,6 @@ function App() {
       <IntroSection />
       <VideoSection />
       <BuySection />
-      <GallerySection />
       <FootSection />
     </div>
   );

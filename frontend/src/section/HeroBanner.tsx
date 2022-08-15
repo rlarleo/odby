@@ -12,11 +12,11 @@ const HeroBanner: React.FC = () => {
   const [ourGallery, setOurGallery] = useState(defaultFont);
 
   return (
-    <header className="App-header">
+    <div className="App-section">
       <Box
         sx={{
           width: '100%',
-          height: '100vh',
+          height: isMobile ? 'auto' : '100vh',
           backgroundSize: '100%',
           backgroundImage: `url(${`${process.env.PUBLIC_URL}/images/Banner.png`})`,
           backgroundRepeat: 'no-repeat',
@@ -29,8 +29,7 @@ const HeroBanner: React.FC = () => {
           spacing={1}
           sx={{
             width: '100%',
-            height: '40vh',
-            pt: '23vh'
+            pt: isMobile ? 'auto' : '23vh',
           }}
           >
           <PageLogo />
@@ -44,7 +43,7 @@ const HeroBanner: React.FC = () => {
             width: '100%',
           }}
         >
-          <Stack direction={isMobile? "column" : "row"} spacing={isMobile? 5 : 20} sx={{ p: 10 }}>
+          <Stack direction={isMobile? "column" : "row"} spacing={isMobile? 5 : 20} sx={{ p: isMobile? 0 : 10 }}>
             <Link to="1" spy={true} smooth={true}>
               <span 
                 onMouseEnter={() => setAboutUs(hoverFont)}
@@ -76,7 +75,7 @@ const HeroBanner: React.FC = () => {
         </Stack>
       </Box>
 
-    </header>
+    </div>
   );
 };
 
