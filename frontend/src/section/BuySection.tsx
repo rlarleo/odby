@@ -27,6 +27,10 @@ const BuySection: React.FC = () => {
 
   };
 
+  function handleOpensea() {
+    window.location.href = "https://opensea.io/ODBY";
+  }
+
   return (
     <div 
       className="App-section"
@@ -38,16 +42,20 @@ const BuySection: React.FC = () => {
       }}
     >
         {!isMobile &&
-        <Stack 
-          style={{
-            height: '350px',
-            width: '100vh',
-            backgroundImage: `url(${`${process.env.PUBLIC_URL}/images/ticket.svg`})`,
-            backgroundRepeat: 'no-repeat',
-            backgroundPosition: 'center'
-          }}
+        <Button
+          onClick={handleOpensea}
         >
-        </Stack>
+          <Stack 
+            style={{
+              height: '350px',
+              width: '100vh',
+              backgroundImage: `url(${`${process.env.PUBLIC_URL}/images/ticket.svg`})`,
+              backgroundRepeat: 'no-repeat',
+              backgroundPosition: 'center'
+            }}
+          >
+          </Stack>
+        </Button>
       }
       <Stack
         sx={{padding: isMobile? 10 : 10, width: '60vw'}}

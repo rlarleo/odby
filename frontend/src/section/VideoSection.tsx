@@ -23,7 +23,6 @@ const StyledSlider = styled(Slider)`
 `;
 
 const VideoSection: React.FC = () => {
-  const test = `${process.env.PUBLIC_URL}/gif/test.gif`
   const datas = [
     {
       video: `${process.env.PUBLIC_URL}/gif/file1.gif`,
@@ -102,6 +101,7 @@ const VideoSection: React.FC = () => {
                   <Stack direction="row" flex={1}>
                     <Stack flex={1.5}>
                     <div className="outer">
+                        <div style={{height: isMobile? '20px' : '50px', backgroundColor: 'white'}} />
                         {isMobile ? 
                         // eslint-disable-next-line jsx-a11y/alt-text
                           <img key={1} src={data.video} width='100%' /> : 
@@ -112,6 +112,7 @@ const VideoSection: React.FC = () => {
                           max-width='100%' 
                           height='auto'  
                         />}
+                        <div style={{height: isMobile? '20px' : '50px', backgroundColor: 'white'}} />
                       </div>
                       </Stack>
                     <Stack

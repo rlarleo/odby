@@ -8,6 +8,10 @@ const FootSection: React.FC = () => {
   const twitterIcon = `${process.env.PUBLIC_URL}/icons/twitter.png`
   const instaIcon = `${process.env.PUBLIC_URL}/icons/insta.png`
 
+  function handleOpensea() {
+    window.location.href = "https://opensea.io/ODBY";
+  }
+  
   return (
     <div className="App-foot-section">
       <Stack direction="row" sx={{ pb: isMobile? 5 : 10 }}>
@@ -40,21 +44,27 @@ const FootSection: React.FC = () => {
                 plumplum01@pusan.ac.kr
               </div>
             </Stack>
-            <Button>
+            <Button
+              onClick={handleOpensea}
+            >
               <img
                 src={openSeaIcon}
                 alt=""
                 width= "30px"
               />
             </Button>
-            <Button>
+            <Button
+              onClick={() => window.open('https://www.twitter.com/oddbody_art', '_blank')}
+            >
               <img
                 src={twitterIcon}
                 alt=""
                 width="30px"
               />
             </Button>
-            <Button>
+            <Button
+              onClick={() => window.open('https://www.instagram.com/oddbody.art', '_blank')}
+            >
               <img
                 src={instaIcon}
                 alt=""
