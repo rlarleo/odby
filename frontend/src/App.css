@@ -112,6 +112,12 @@
   overflow: hidden;
   -webkit-transform: translateZ(0);
 }
+
+.mobile-outer {
+  border-radius: 20px 20px 0px 0px;
+  overflow: hidden;
+  -webkit-transform: translateZ(0);
+}
 .video {
 position: relative;
 left: 0;

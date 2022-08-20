@@ -98,66 +98,110 @@ const VideoSection: React.FC = () => {
                     textAlign: 'center',
                     padding: 0,
                   }}>
-                  <Stack direction="row" flex={1}>
-                    <Stack flex={1.5}>
-                    <div className="outer">
-                        <div style={{height: isMobile? '20px' : '50px', backgroundColor: 'white'}} />
-                        {isMobile ? 
-                        // eslint-disable-next-line jsx-a11y/alt-text
-                          <img key={1} src={data.video} width='100%' /> : 
-                        // eslint-disable-next-line jsx-a11y/alt-text
-                        <img 
-                          src={data.video} 
-                          width='100%' 
-                          max-width='100%' 
-                          height='auto'  
-                        />}
-                        <div style={{height: isMobile? '20px' : '50px', backgroundColor: 'white'}} />
-                      </div>
+                    {isMobile ? 
+                      <Stack direction="column">
+                        <Stack>
+                          <div className="mobile-outer">
+                            <img key={1} src={data.video} width='100%' /> 
+                          </div>
+                          </Stack>
+                        <Stack
+                          direction="column"
+                          alignItems="left"
+                          sx={{
+                            minHeight: '220px',
+                            backgroundColor: 'rgba(255, 255, 255, 0.3)',
+                              borderRadius: '0px 0px 20px 20px;'
+                          }}
+                        >
+                          <Box sx={{
+                            fontSize: 'calc(10px + 2vmin)',
+                            fontWeight: '600',
+                            pt: 3,
+                            pl: 3,
+                            textAlign: 'left',
+                            opacity: '1 !important',
+                            color: 'white'
+                          }}>
+                            {data.header}
+                          </Box>
+                          <Box sx={{
+                            fontSize: 'calc(8px + 1vmin)',
+                            p: 3,
+                            textAlign: 'left',
+                            maxHeight: '300px',
+                            opacity: '1 !important',
+                            color: 'white',
+                            overflowY: 'hidden',
+                          }}>
+                            { data.content.split('\n').map((line) => {
+                                return (
+                                  <>
+                                    {line}
+                                    <br />
+                                  </>
+                                );
+                              })
+                            }
+                          </Box>
+                        </Stack>
+                      </Stack> :
+                      <Stack direction="row" flex={1}>
+                        <Stack flex={1.5}>
+                        <div className="outer">
+                            {/* <div style={{height: isMobile? '20px' : '50px', backgroundColor: 'white'}} /> */}
+                              <img 
+                                src={data.video} 
+                                width='100%' 
+                                max-width='100%' 
+                                height='auto'  
+                              />
+                            {/* <div style={{height: isMobile? '20px' : '50px', backgroundColor: 'white'}} /> */}
+                          </div>
+                          </Stack>
+                        <Stack
+                          direction="column"
+                          alignItems="left"
+                          flex={1}
+                          sx={{
+                            backgroundColor: 'rgba(255, 255, 255, 0.3)',
+                            borderRadius: '0px 20px 20px 0px;'
+                          }}
+                        >
+                          <Box sx={{
+                            fontSize: 'calc(10px + 2vmin)',
+                            fontWeight: '600',
+                            pt: 3,
+                            pl: 3,
+                            textAlign: 'left',
+                            opacity: '1 !important',
+                            color: 'white'
+                          }}>
+                            {data.header}
+                          </Box>
+                          <Box sx={{
+                            fontSize: 'calc(8px + 1vmin)',
+                            p: 3,
+                            textAlign: 'left',
+                            maxHeight: '300px',
+                            opacity: '1 !important',
+                            color: 'white',
+                            overflowY: 'hidden',
+                          }}>
+                            {data.content.split('\n').map((line) => {
+                                return (
+                                  <>
+                                    {line}
+                                    <br />
+                                  </>
+                                );
+                              })
+                            }
+                          </Box>
+                        </Stack>
                       </Stack>
-                    <Stack
-                      direction="column"
-                      alignItems="left"
-                      flex={1}
-                      sx={{
-                        backgroundColor: 'rgba(255, 255, 255, 0.3)',
-                         borderRadius: '0px 20px 20px 0px;'
-                      }}
-                    >
-                      <Box sx={{
-                        fontSize: 'calc(10px + 2vmin)',
-                        fontWeight: '600',
-                        pt: 3,
-                        pl: 3,
-                        textAlign: 'left',
-                        opacity: '1 !important',
-                        color: 'white'
-                      }}>
-                        {data.header}
-                      </Box>
-                      <Box sx={{
-                        fontSize: 'calc(8px + 1vmin)',
-                        p: 3,
-                        textAlign: 'left',
-                        maxHeight: '300px',
-                        opacity: '1 !important',
-                        color: 'white',
-                        overflowY: 'hidden',
-                      }}>
-                        {
-                          !isMobile &&
-                          data.content.split('\n').map((line) => {
-                            return (
-                              <>
-                                {line}
-                                <br />
-                              </>
-                            );
-                          })
-                        }
-                      </Box>
-                    </Stack>
-                  </Stack>
+                    }
+                  
                 </Box>
               )
             })}
