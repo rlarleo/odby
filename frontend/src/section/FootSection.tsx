@@ -12,7 +12,7 @@ const FootSection: React.FC = () => {
     <div className="App-foot-section">
       <Stack direction="row" sx={{ pb: isMobile? 5 : 10 }}>
         {!isMobile &&
-          <Button>
+          <Button disabled>
             <img
               src={oddbodyLogo}
               alt=""

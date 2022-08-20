@@ -26,31 +26,30 @@ const VideoSection: React.FC = () => {
   const test = `${process.env.PUBLIC_URL}/gif/test.gif`
   const datas = [
     {
-      video: test,
-      content: 'fadsfadsf'
+      video: `${process.env.PUBLIC_URL}/gif/file1.gif`,
+      header: 'Balloon 1.',
+      content: '- A desire to take care of the way one looks has been progressed diversely as to diet, plastic surgery, makeup, etc. in human\'s history. A swelling body expresses an attitude of becoming obsession with oneself\'s drawback.'
     },
     {
-      video: test,
-      content: '소설의 프롤로그는 오베가 애플 전자제품 가게에서 점원을 윽박지르면서 시작한다.\n\
-       베는 아내 소냐가 죽은 이후 살아갈 이유가 없다며 죽기를 바란다. 하지만 죽기로 다짐할 때마다.\n\
-        오베가 필요로 하는 사건이 발생한다. 이웃으로 온 패트릭의 차를 고쳐주기도 하고, 갈 곳 없는 고양이를 키우기도 하고, 기차에 치일 뻔한 사람을 구하기도 한다.\n\
-       오베는 괴팍한 성격과 꼰대다운 편향된 사고를 가지고 있지만 우직하게 자신의 일을 처리하고, 남을 도울 수 있을 때는 돕는 성격으로 나와서 사건들을 처리할 때까지 죽음을 미루게 된다.'
+      video: `${process.env.PUBLIC_URL}/gif/file2.gif`,
+      header: 'Balloon 2.',
+      content: '- A desire to take care of the way one looks has been progressed diversely as to diet, plastic surgery, makeup, etc. in human\'s history. A swelling body expresses an attitude of becoming obsession with oneself\'s drawback.'
     },
     {
-      video: test,
-      content: 'fadsfadsf'
+      video: `${process.env.PUBLIC_URL}/gif/file3.gif`,
+      header: 'Tree',
+      content: 'We completed the shape of the tree by detecting the little moving movements. \n\
+      - Attempted to express the history of our body as an existent image. We tend to immerse ourselves in this self and easily forget the past. But to be present yourself, to develop personal identities, even if those are minor moments, lots of traces that spent many of the times got gathered for your present self and future.'
     },
     {
-      video: test,
-      content: 'fadsfadsf'
+      video: `${process.env.PUBLIC_URL}/gif/file4.gif`,
+      header: 'of me',
+      content: '- You can\'t change the fact that the time goes only the one way, even through the physical force. But in the world view where the characters exist, has directed the various scenes by twisting the element of time.'
     },
     {
-      video: test,
-      content: 'fadsfadsf'
-    },
-    {
-      video: test,
-      content: 'fadsfadsf'
+      video: `${process.env.PUBLIC_URL}/gif/file5.gif`,
+      header: 'persona',
+      content: '- We experience the various looks when we change our personalities, perspectives and attitudes according to the given environment. And that causes confusion about one\'s identity. In the same circumstance, the characters of the piece have a distinct form of the human body, but they exist as the heterogeneous forms using the somatic function differently. \<Persona\> is directed to agonize about oneself who alters situationally.'
     },
   ];
 
@@ -133,10 +132,10 @@ const VideoSection: React.FC = () => {
                         opacity: '1 !important',
                         color: 'white'
                       }}>
-                        Header
+                        {data.header}
                       </Box>
                       <Box sx={{
-                        fontSize: 'calc(10px + 1vmin)',
+                        fontSize: 'calc(8px + 1vmin)',
                         p: 3,
                         textAlign: 'left',
                         maxHeight: '300px',
