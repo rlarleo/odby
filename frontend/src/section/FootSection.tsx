@@ -9,7 +9,9 @@ const FootSection: React.FC = () => {
   const instaIcon = `${process.env.PUBLIC_URL}/icons/insta.png`
 
   function handleOpensea() {
-    window.location.href = "https://opensea.io/ODBY";
+    var openNewWindow = window.open("about:blank");
+    if(openNewWindow)
+      openNewWindow.location.href = "https://opensea.io/ODBY";
   }
   
   return (
@@ -41,7 +43,7 @@ const FootSection: React.FC = () => {
             <Stack sx={{ paddingRight: isMobile? '10px' : '20px' }}>
               <div style={{ textAlign: 'left' }}>Contact Us</div>
               <div style={{ color: 'grey', textAlign: 'left', fontSize: '10px', paddingTop: '10px' }}>
-                plumplum01@pusan.ac.kr
+                odby.art@gmail.com
               </div>
             </Stack>
             <Button
@@ -54,7 +56,7 @@ const FootSection: React.FC = () => {
               />
             </Button>
             <Button
-              onClick={() => window.open('https://www.twitter.com/oddbody_art', '_blank')}
+              onClick={() => window.open('https://www.twitter.com/oddbody_art')}
             >
               <img
                 src={twitterIcon}

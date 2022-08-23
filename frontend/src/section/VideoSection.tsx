@@ -25,28 +25,28 @@ const StyledSlider = styled(Slider)`
 const VideoSection: React.FC = () => {
   const datas = [
     {
-      video: `${process.env.PUBLIC_URL}/gif/file1.gif`,
-      header: 'Balloon 1.',
-      content: '- A desire to take care of the way one looks has been progressed diversely as to diet, plastic surgery, makeup, etc. in human\'s history. A swelling body expresses an attitude of becoming obsession with oneself\'s drawback.'
+      video: `${process.env.PUBLIC_URL}/gif/of me.gif`,
+      header: 'of me',
+      content: '- You can\'t change the fact that the time goes only the one way, even through the physical force. But in the world view where the characters exist, has directed the various scenes by twisting the element of time.'
     },
     {
-      video: `${process.env.PUBLIC_URL}/gif/file2.gif`,
-      header: 'Balloon 2.',
-      content: '- A desire to take care of the way one looks has been progressed diversely as to diet, plastic surgery, makeup, etc. in human\'s history. A swelling body expresses an attitude of becoming obsession with oneself\'s drawback.'
-    },
-    {
-      video: `${process.env.PUBLIC_URL}/gif/file3.gif`,
+      video: `${process.env.PUBLIC_URL}/gif/tree.gif`,
       header: 'Tree',
       content: 'We completed the shape of the tree by detecting the little moving movements. \n\
       - Attempted to express the history of our body as an existent image. We tend to immerse ourselves in this self and easily forget the past. But to be present yourself, to develop personal identities, even if those are minor moments, lots of traces that spent many of the times got gathered for your present self and future.'
     },
     {
-      video: `${process.env.PUBLIC_URL}/gif/file4.gif`,
-      header: 'of me',
-      content: '- You can\'t change the fact that the time goes only the one way, even through the physical force. But in the world view where the characters exist, has directed the various scenes by twisting the element of time.'
+      video: `${process.env.PUBLIC_URL}/gif/balloon1.gif`,
+      header: 'Balloon 1.',
+      content: '- A desire to take care of the way one looks has been progressed diversely as to diet, plastic surgery, makeup, etc. in human\'s history. A swelling body expresses an attitude of becoming obsession with oneself\'s drawback.'
     },
     {
-      video: `${process.env.PUBLIC_URL}/gif/file5.gif`,
+      video: `${process.env.PUBLIC_URL}/gif/balloon2.gif`,
+      header: 'Balloon 2.',
+      content: '- A desire to take care of the way one looks has been progressed diversely as to diet, plastic surgery, makeup, etc. in human\'s history. A swelling body expresses an attitude of becoming obsession with oneself\'s drawback.'
+    },
+    {
+      video: `${process.env.PUBLIC_URL}/gif/parsona.gif`,
       header: 'persona',
       content: '- We experience the various looks when we change our personalities, perspectives and attitudes according to the given environment. And that causes confusion about one\'s identity. In the same circumstance, the characters of the piece have a distinct form of the human body, but they exist as the heterogeneous forms using the somatic function differently. \<Persona\> is directed to agonize about oneself who alters situationally.'
     },

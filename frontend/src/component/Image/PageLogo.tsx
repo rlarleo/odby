@@ -11,7 +11,7 @@ const PageLogo: React.FC = () => {
         src={logo}
         alt=""
         width={isMobile? '100px' : '270px'}
-        onClick={() => window.open('https://www.instagram.com/', '_blank')}
+        // onClick={() => window.open('https://www.instagram.com/', '_blank')}
       />
     </div>
   );

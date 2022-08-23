@@ -1,12 +1,32 @@
 import React, { useState, useEffect } from 'react';
-import { Box, Stack, Button } from '@mui/material';
+import { Box, Stack, Button, Typography } from '@mui/material';
 import OpenSeaButton from '../component/Button/OpenSeaButton';
 import { isMobile } from 'react-device-detect';
 import GallerySection from '../section/GallerySection';
+import { borderRadius, fontWeight } from '@mui/system';
+import { styled } from '@mui/material/styles';
+import { purple } from '@mui/material/colors';
+import { ButtonProps } from '@mui/material/Button';
+
+const ColorButton = styled(Button)<ButtonProps>(({ theme }) => ({
+  minHeight: 100,
+  color: 'black',
+  fontWeight: 800,
+  fontSize: 16,
+  borderColor: 'black',
+  borderWidth: 'medium',
+  backgroundColor: '#c3ff17',
+  '&:hover': {
+    backgroundColor: '#f3ffa8',
+    borderColor: 'black',
+    borderWidth: 'medium',
+  },
+}));
+
 
 const BuySection: React.FC = () => {
   const [scroll, setScroll] = useState(false);
-  const oddbodyLogo = `${process.env.PUBLIC_URL}/icons/ticket.svg`
+  const oddbodyLogo = `${process.env.PUBLIC_URL}/icons/ticket.png`
 
   useEffect(() => {
     window.addEventListener('scroll', handleScroll);
@@ -28,7 +48,9 @@ const BuySection: React.FC = () => {
   };
 
   function handleOpensea() {
-    window.location.href = "https://opensea.io/ODBY";
+    var openNewWindow = window.open("about:blank");
+    if(openNewWindow)
+      openNewWindow.location.href = "https://opensea.io/ODBY";
   }
 
   return (
@@ -41,22 +63,158 @@ const BuySection: React.FC = () => {
         // backgroundAttachment: 'fixed'
       }}
     >
-        {!isMobile &&
-        <Button
-          onClick={handleOpensea}
-        >
-          <Stack 
-            style={{
-              height: '350px',
-              width: '100vh',
-              backgroundImage: `url(${`${process.env.PUBLIC_URL}/images/ticket.svg`})`,
-              backgroundRepeat: 'no-repeat',
-              backgroundPosition: 'center'
-            }}
+        {isMobile ?
+          <Button
+            onClick={handleOpensea}
           >
+            <Stack 
+              style={{
+                width: '80vw',
+                minHeight: '200px',
+                backgroundSize: '100%',
+                backgroundImage: `url(${`${process.env.PUBLIC_URL}/images/mobile_ticket.png`})`,
+                backgroundRepeat: 'no-repeat',
+                backgroundPosition: 'center'
+              }}
+            >
+            </Stack>
+          </Button>
+        :
+          <Stack
+            direction="row"
+            style={{
+                height: '280px',
+                width: '90vh',
+                backgroundImage: `url(${`${process.env.PUBLIC_URL}/images/ticket-background.png`})`,
+                backgroundSize: '100%',
+                backgroundRepeat: 'no-repeat',
+                backgroundPosition: 'center'
+              }}
+          >
+            <Stack
+              flex={0.8}
+              style={{
+                padding: 10,
+                backgroundImage: `url(${`${process.env.PUBLIC_URL}/images/ticket.png`})`,
+                backgroundSize: '100%',
+                backgroundRepeat: 'no-repeat',
+              }}
+            >
+            </Stack>
+            <Stack
+              flex={3}
+              direction="row"
+              spacing={0.5}
+            >
+              <Stack
+                flex={2}
+                style={{
+                  backgroundColor: 'white',
+                  borderRadius: '0 15px 15px 0'
+                }}
+              >
+                <Stack
+                  sx={{
+                    pt: 1.5,
+                    textAlign: 'left'
+                  }}
+                  spacing={-2}
+                >
+                  <Stack
+                    fontSize={80}
+                    fontWeight={600}
+                    color="black"
+                  >
+                    ODBY
+                  </Stack>
+                  <div className="ODBY-ODD-BODY-ODBY-Open-Sea-Ticket---ODBY-NFT---">
+                    (ODD BODY)
+                  </div>
+                </Stack>
+                <Stack
+                  sx={{
+                    pt: 6,
+                    textAlign: 'left',
+                  }}
+                >
+                  <Stack
+                    fontSize={20}
+                    fontWeight={600}
+                    color="black"
+                    display="inline-block"
+                  >
+                    <span style={{ backgroundColor: "#e9fdb1" }}>Virtual exhibition of the ODBY</span>
+                  </Stack>
+                  <Stack
+                    sx={{
+                      pt: 1.5,
+                      pr: 4
+                    }}
+                    fontSize={10}
+                    color="black"
+                    display="inline-block"
+                  >
+                    <span>
+                      - Please make sure to check your admission ticket to get the NFT collection of the ODBY project. <br />
+                      - You can own the 'ODBY video NFT' which combines dancer's movements and graphic art using our Open Sea platform.
+                    </span>
+                  </Stack>
+                </Stack>
+              </Stack>
+              <Stack
+                flex={1}
+                style={{
+                  backgroundColor: 'white',
+                  borderRadius: '15px 0 0 15px'
+                }}
+                spacing={1}
+              >
+                <Stack
+                  sx={{
+                    pt: 3,
+                    pl: 3,
+                    textAlign: 'left',
+                    fontWeight: 700,
+                    fontSize: 20,
+                  }}
+                  color="gray"
+                >
+                  Click Here !
+                </Stack>
+                <Stack
+                  sx={{
+                    pl: 3,
+                    pr: 3,
+                    pb: 3,
+                  }}>
+                  <ColorButton
+                    onClick={handleOpensea}
+                    variant="outlined"
+                  >
+                    BUY A ODBY ON OPENSEA
+                  </ColorButton>
+                </Stack>
+                <Stack
+                  sx={{
+                    pt: 1,
+                    px: 3,
+                  }}
+                >
+                  <Stack
+                    sx={{
+                      backgroundImage: `url(${`${process.env.PUBLIC_URL}/images/bacord.png`})`,
+                      // backgroundSize: '100%',
+                      minHeight: 70,
+                      backgroundRepeat: 'no-repeat',
+                    }}
+                  />
+                </Stack>
+              </Stack>
+            </Stack>
           </Stack>
-        </Button>
       }
+
+      
       <Stack
         sx={{padding: isMobile? 10 : 10, width: '60vw'}}
       >

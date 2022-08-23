@@ -138,7 +138,7 @@ opacity: 1;
   width: 100%;
   height: 300px;
   padding-top: 100px;
-  padding-bottom: 100px;
+  padding-bottom: 150px;
   margin-top: 50px;
   display: flex;
   flex-direction: row;
@@ -146,6 +146,12 @@ opacity: 1;
   align-items: center;
   backdrop-filter: blur(10px);
   background-color: rgba(0, 0, 0, 0.1);
+}
+
+.ODBY-ODD-BODY-ODBY-Open-Sea-Ticket---ODBY-NFT--- {
+  text-shadow: -1px 0 #000,	       0 1px #000,	       1px 0 #000,	       0 -1px #000;
+  letter-spacing:6px;
+  font-weight: 700;
 }
 
   
