@@ -59,6 +59,11 @@
   justify-content: center;
   font-size: calc(10px + 2vmin);
   color: white;
+  -ms-overflow-style: none; /* IE and Edge */
+  scrollbar-width: none; /* Firefox */
+}
+.App-video-section::-webkit-scrollbar {
+  display: none; /* Chrome, Safari, Opera*/
 }
 
 .App-foot-section {

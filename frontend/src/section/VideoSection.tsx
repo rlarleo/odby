@@ -1,10 +1,9 @@
-import React, { useRef, useState } from 'react';
+import React, { useRef, useCallback, RefObject, useEffect, useState } from 'react';
 import styled from 'styled-components';
 import { Box, Paper, Stack } from '@mui/material';
 import '../slider/slick.css';
 import '../slider/slick-theme.css';
 import Slider from 'react-slick';
-import VideoOpenSeaButton from '../component/Button/VideoOpenSeaButton'
 import { isMobile } from 'react-device-detect';
 
 const StyledSlider = styled(Slider)`
@@ -22,7 +21,44 @@ const StyledSlider = styled(Slider)`
 }
 `;
 
+type DOMRectProperty =
+  | "height"
+  | "width"
+  | "x"
+  | "y"
+  | "top"
+  | "right"
+  | "bottom"
+  | "left";
+
+export const useGetElementProperty = <T extends HTMLElement>(
+  elementRef: RefObject<T>
+) => {
+  const getElementProperty = useCallback(
+    (targetProperty: DOMRectProperty): number => {
+      const clientRect = elementRef.current?.getBoundingClientRect();
+      if (clientRect) {
+        return clientRect[targetProperty];
+      }
+
+      return 0;
+    },
+    [elementRef]
+  );
+
+  return {
+    getElementProperty,
+  };
+};
+
 const VideoSection: React.FC = () => {
+  const [contentHeight, setContentHeight] = useState(0);
+  const targetRef = useRef(null);
+  const { getElementProperty } =
+    useGetElementProperty<HTMLDivElement>(targetRef);
+  useEffect(() => {
+    setContentHeight(getElementProperty("width")/2 - 40);
+  }, [getElementProperty]);
   const datas = [
     {
       video: `${process.env.PUBLIC_URL}/gif/of me.gif`,
@@ -150,7 +186,8 @@ const VideoSection: React.FC = () => {
                         <Stack flex={1.5}>
                         <div className="outer">
                             {/* <div style={{height: isMobile? '20px' : '50px', backgroundColor: 'white'}} /> */}
-                              <img 
+                              <img
+                                ref={targetRef}
                                 src={data.video} 
                                 width='100%' 
                                 max-width='100%' 
@@ -173,30 +210,40 @@ const VideoSection: React.FC = () => {
                             fontWeight: '600',
                             pt: 3,
                             pl: 3,
+                            pb: 3,
                             textAlign: 'left',
                             opacity: '1 !important',
                             color: 'white'
                           }}>
                             {data.header}
                           </Box>
-                          <Box sx={{
-                            fontSize: 'calc(8px + 1vmin)',
-                            p: 3,
-                            textAlign: 'left',
-                            maxHeight: '300px',
-                            opacity: '1 !important',
-                            color: 'white',
-                            overflowY: 'hidden',
-                          }}>
-                            {data.content.split('\n').map((line) => {
-                                return (
-                                  <>
-                                    {line}
-                                    <br />
-                                  </>
-                                );
-                              })
-                            }
+                          <Box
+                            sx={{
+                              px: 3,
+                              pb: 3
+                            }}
+                          >
+                            <div
+                              className="hide-scroll"
+                              style={{
+                              fontSize: 'calc(8px + 1vmin)',
+                              textAlign: 'left',
+                              maxHeight: contentHeight,
+                              height: 'auto',
+                              opacity: '1 !important',
+                              color: 'white',
+                              overflow: 'auto',
+                            }}>
+                              {data.content.split('\n').map((line) => {
+                                  return (
+                                    <>
+                                      {line}
+                                      <br />
+                                    </>
+                                  );
+                                })
+                              }
+                          </div>
                           </Box>
                         </Stack>
                       </Stack>
