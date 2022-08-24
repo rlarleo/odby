@@ -12,7 +12,7 @@ const IntroSection: React.FC = () => {
         sx={{padding: isMobile? 5 : 10}}
       >
         <Box
-          data-aos="fade-right"
+          data-aos={isMobile ? "fade-up" : "fade-right"}
           data-aos-delay="50" 
         >
           <img
@@ -23,7 +23,7 @@ const IntroSection: React.FC = () => {
           />
         </Box>
         <Stack 
-          data-aos="fade-left"
+          data-aos={isMobile ? "fade-up" : "fade-left"}
           data-aos-delay="50" 
           alignItems="center"   
           justifyContent="center"
