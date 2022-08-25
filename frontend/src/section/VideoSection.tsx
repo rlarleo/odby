@@ -5,6 +5,7 @@ import '../slider/slick.css';
 import '../slider/slick-theme.css';
 import Slider from 'react-slick';
 import { isMobile } from 'react-device-detect';
+import zIndex from '@mui/material/styles/zIndex';
 
 const StyledSlider = styled(Slider)`
 .slick-dots li.slick-active  {
@@ -145,11 +146,16 @@ const VideoSection: React.FC = () => {
                           direction="column"
                           alignItems="left"
                           sx={{
+                            width:'100%',
                             minHeight: '220px',
                             backgroundColor: 'rgba(255, 255, 255, 0.3)',
                               borderRadius: '0px 0px 20px 20px;'
                           }}
                         >
+                          <div style={{position: "absolute", zIndex: 10, minWidth: "100%", minHeight: "100%"}}>
+                            <img key={1} src={data.video} style={{ display: 'none'}}/> 
+                          </div>
+                          <div style={{position: "relative"}}>
                           <Box sx={{
                             fontSize: 'calc(10px + 2vmin)',
                             fontWeight: '600',
@@ -162,6 +168,7 @@ const VideoSection: React.FC = () => {
                             {data.header}
                           </Box>
                           <Box sx={{
+                            maxWidth: "70vw",
                             fontSize: 'calc(8px + 1vmin)',
                             p: 3,
                             textAlign: 'left',
@@ -180,6 +187,7 @@ const VideoSection: React.FC = () => {
                               })
                             }
                           </Box>
+                          </div>
                         </Stack>
                       </Stack> :
                       <Stack direction="row" flex={1}>
