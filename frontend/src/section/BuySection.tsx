@@ -39,6 +39,7 @@ const BuySection: React.FC = () => {
           </Button>
         :
         <Button
+          sx={{pt: 7}}
           onClick={handleOpensea}
         >
           <Stack 
@@ -47,6 +48,7 @@ const BuySection: React.FC = () => {
             onMouseLeave={() => setIsListHover(false)}
           >
             <img
+              className='ticket_img'
               src={isListHover ? hoverTicket : ticket}
               alt=""
             >

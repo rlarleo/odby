@@ -8,6 +8,7 @@ import BuySection from './section/BuySection';
 import FootSection from './section/FootSection';
 import GallerySection from './section/GallerySection';
 import TranslateButton from './component/Button/TranslateButton'
+import { isMobile } from 'react-device-detect';
 import './App.css';
 
 function App() {
@@ -20,9 +21,10 @@ function App() {
 
   return (
     <div className="App">
-      <div className='fly'>
-            <TranslateButton language={language} setLanguage={setLanguage}/>
-            </div>
+        <div className={ isMobile ? "no_fly" : "fly" }>
+          <TranslateButton language={language} setLanguage={setLanguage}/>
+        </div>
+      
       <HeroBanner />
       <IntroSection />
       <VideoSection />
