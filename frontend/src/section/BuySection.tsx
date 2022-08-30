@@ -57,7 +57,7 @@ const BuySection: React.FC = () => {
         </Button>
       }
       <Stack
-        sx={{p: isMobile? 10 : 10, pb: isMobile? 20 : 0, width: '60vw'}}
+        sx={{p: isMobile? 5 : 10, pb: isMobile? 20 : 0, width: '60vw'}}
       >
         <span 
           className="-ODBYODD-BODY-"
