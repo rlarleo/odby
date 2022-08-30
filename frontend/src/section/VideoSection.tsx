@@ -5,7 +5,7 @@ import '../slider/slick.css';
 import '../slider/slick-theme.css';
 import Slider from 'react-slick';
 import { isMobile } from 'react-device-detect';
-import zIndex from '@mui/material/styles/zIndex';
+import { useTranslation } from 'react-i18next'
 
 const StyledSlider = styled(Slider)`
 .slick-dots li.slick-active  {
@@ -53,6 +53,7 @@ export const useGetElementProperty = <T extends HTMLElement>(
 };
 
 const VideoSection: React.FC = () => {
+  const { t }  = useTranslation(['page'])
   const [contentHeight, setContentHeight] = useState(0);
   const targetRef = useRef(null);
   const { getElementProperty } =
@@ -64,28 +65,27 @@ const VideoSection: React.FC = () => {
     {
       video: `${process.env.PUBLIC_URL}/gif/of me.gif`,
       header: 'of me',
-      content: '- You can\'t change the fact that the time goes only the one way, even through the physical force. But in the world view where the characters exist, has directed the various scenes by twisting the element of time.'
+      content: t('page:video.of me')
     },
     {
       video: `${process.env.PUBLIC_URL}/gif/tree.gif`,
       header: 'Tree',
-      content: 'We completed the shape of the tree by detecting the little moving movements. \n\
-      - Attempted to express the history of our body as an existent image. We tend to immerse ourselves in this self and easily forget the past. But to be present yourself, to develop personal identities, even if those are minor moments, lots of traces that spent many of the times got gathered for your present self and future.'
+      content: t('page:video.Tree')
     },
     {
       video: `${process.env.PUBLIC_URL}/gif/balloon1.gif`,
       header: 'Balloon 1.',
-      content: '- A desire to take care of the way one looks has been progressed diversely as to diet, plastic surgery, makeup, etc. in human\'s history. A swelling body expresses an attitude of becoming obsession with oneself\'s drawback.'
+      content: t('page:video.Balloon 1.')
     },
     {
       video: `${process.env.PUBLIC_URL}/gif/balloon2.gif`,
       header: 'Balloon 2.',
-      content: '- A desire to take care of the way one looks has been progressed diversely as to diet, plastic surgery, makeup, etc. in human\'s history. A swelling body expresses an attitude of becoming obsession with oneself\'s drawback.'
+      content: t('page:video.Balloon 2.')
     },
     {
       video: `${process.env.PUBLIC_URL}/gif/parsona.gif`,
       header: 'persona',
-      content: '- We experience the various looks when we change our personalities, perspectives and attitudes according to the given environment. And that causes confusion about one\'s identity. In the same circumstance, the characters of the piece have a distinct form of the human body, but they exist as the heterogeneous forms using the somatic function differently. \<Persona\> is directed to agonize about oneself who alters situationally.'
+      content: t('page:video.persona')
     },
   ];
 
@@ -101,7 +101,7 @@ const VideoSection: React.FC = () => {
   return (
     <div 
       id="2" 
-      className="App-video-section"
+      className={ isMobile ? "App-mobile-video-section" : "App-video-section" }
       style={{
         backgroundSize: '100%',
         backgroundImage: `url(${`${process.env.PUBLIC_URL}/images/slide_back.png`})`,

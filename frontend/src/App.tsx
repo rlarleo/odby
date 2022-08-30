@@ -7,13 +7,11 @@ import VideoSection from './section/VideoSection';
 import BuySection from './section/BuySection';
 import FootSection from './section/FootSection';
 import GallerySection from './section/GallerySection';
+import TranslateButton from './component/Button/TranslateButton'
 import './App.css';
-import Axios from 'axios';
 
-Axios.defaults.baseURL = process.env.REACT_APP_API_SERVER;
-console.log(process.env.REACT_APP_API_SERVER)
 function App() {
-
+  const [language, setLanguage] = useState<'ko' | 'en'>('ko');
   useEffect(() => {
     AOS.init({
       duration: 1500,
@@ -22,6 +20,9 @@ function App() {
 
   return (
     <div className="App">
+      <div className='fly'>
+            <TranslateButton language={language} setLanguage={setLanguage}/>
+            </div>
       <HeroBanner />
       <IntroSection />
       <VideoSection />

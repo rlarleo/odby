@@ -1,11 +1,12 @@
-import React, { useRef, useState } from 'react';
-import styled from 'styled-components';
-import { Box, Stack, Button } from '@mui/material';
+import React from 'react';
+import { Stack, Button } from '@mui/material';
 import '../slider/slick.css';
 import '../slider/slick-theme.css';
 import { isMobile } from 'react-device-detect';
+import { useTranslation } from 'react-i18next'
 
 const GallerySection: React.FC = () => {
+  const { t }  = useTranslation(['page']);
   const oddbodyLogo = `${process.env.PUBLIC_URL}/icons/oddbody_logo.png`
   return (
     <div 
@@ -24,22 +25,22 @@ const GallerySection: React.FC = () => {
             <img
               src={oddbodyLogo}
               alt=""
-              width= { isMobile? "40px" : "80px" }
+              width= { isMobile? "40px" : "100px" }
               style={{paddingRight: isMobile? "10px" : "30px"}}
             />
           </Button>
         }
-          <span style={{fontSize: "36px", fontWeight: 'bold', color: 'red'}}>
+          <span style={{fontSize: isMobile? "36px" : "48px", fontWeight: 'bold', color: 'red'}}>
             Coming Soon
           </span>
-          <span style={{fontSize: "16px", fontWeight: 'bold'}}>
-            ODBY의 가상 전시장
+          <span style={{fontSize: isMobile? "16px" : "24px", fontWeight: 'bold'}}>
+            {t('page:gallery.text1')}
           </span>
-          <span style={{fontSize: "14px", paddingTop: '40px'}}>
-            이번 ODD BODY 프로젝트의 작품들은 실제 전시장을 넘어서 온라인 디지털 상의 전시장을 통해서 감상하실 수 있습니다.
+          <span style={{fontSize: isMobile? "14px" : "16px", paddingTop: '40px'}}>
+            {t('page:gallery.text2')}
           </span>
-          <span style={{fontSize: "14px", paddingTop: '20px'}}>
-            가상공간 전시장에서의 공간과 시간의 제약을 넘어서 ODBY의 새로운 콘텐츠를 경험해보세요.
+          <span style={{fontSize: isMobile? "14px" : "16px", paddingTop: '20px'}}>
+            {t('page:gallery.text3')}
           </span>
         </Stack>
       </div>
