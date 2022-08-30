@@ -44,7 +44,7 @@ const HeroBanner: React.FC = () => {
           }}
         >
           <Stack direction={isMobile? "column" : "row"} spacing={isMobile? 5 : 20} sx={{ p: isMobile? 0 : 10 }}>
-            <Link to="1" spy={true} smooth={true}>
+            <Link to="1" spy={true} smooth={true} data-aos="fade-right">
               <span 
                 onMouseEnter={() => setAboutUs(hoverFont)}
                 onMouseLeave={() => setAboutUs(defaultFont)}
@@ -53,7 +53,7 @@ const HeroBanner: React.FC = () => {
                 About Us
               </span>
             </Link>
-            <Link to="2" spy={true} smooth={true}>
+            <Link to="2" spy={true} smooth={true} data-aos="fade-up">
               <span 
                 onMouseEnter={() => setVideoList(hoverFont)}
                 onMouseLeave={() => setVideoList(defaultFont)}
@@ -62,7 +62,7 @@ const HeroBanner: React.FC = () => {
                 Video List
               </span>
             </Link>
-            <Link to="3" spy={true} smooth={true}>
+            <Link to="3" spy={true} smooth={true} data-aos="fade-left">
               <span 
                 onMouseEnter={() => setOurGallery(hoverFont)}
                 onMouseLeave={() => setOurGallery(defaultFont)}

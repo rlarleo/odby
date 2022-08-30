@@ -181,6 +181,7 @@ opacity: 1;
 
 .ticket_img {
   filter: brightness(1);
+  filter: hue-rotate(180deg);
 } 
 .ticket_img:hover {
   filter: hue-rotate(180deg);

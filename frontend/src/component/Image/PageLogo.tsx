@@ -6,6 +6,7 @@ const PageLogo: React.FC = () => {
   return (
     <div
       style={{paddingBottom: '20px'}}
+      data-aos="fade-down"
     >
       <img
         src={logo}

@@ -84,15 +84,17 @@ const FootSection: React.FC = () => {
                 <img
                   src={artCouncil}
                   alt=""
-                  width="100px"
+                  height="30px"
                 />
                 <img
                   src={retro}
                   alt=""
+                  height="30px"
                 />
                 <img
                   src={seoulLogo}
                   alt=""
+                  height="30px"
                 />
               </Stack>
             </Stack> 
@@ -144,6 +146,7 @@ const FootSection: React.FC = () => {
                 <img
                   src={retro}
                   alt=""
+                  width="100px"
                 />
                 <img
                   src={seoulLogo}
