@@ -72,7 +72,7 @@ const BuySection: React.FC = () => {
                 width: '80vw',
                 minHeight: '40vw',
                 backgroundSize: '100%',
-                backgroundImage: `url(${`${process.env.PUBLIC_URL}/images/mobile_ticket.png`})`,
+                backgroundImage: `url(${`${process.env.PUBLIC_URL}/images/new_ticket.png`})`,
                 backgroundRepeat: 'no-repeat',
                 backgroundPosition: 'center'
               }}
@@ -84,11 +84,12 @@ const BuySection: React.FC = () => {
           onClick={handleOpensea}
         >
           <Stack 
+            direction = "row"
             style={{
               width: '55vw',
               minHeight: '450px',
               backgroundSize: '100%',
-              backgroundImage: `url(${`${process.env.PUBLIC_URL}/images/mobile_ticket.png`})`,
+              backgroundImage: `url(${`${process.env.PUBLIC_URL}/images/new_ticket.png`})`,
               backgroundRepeat: 'no-repeat',
               backgroundPosition: 'center'
             }}

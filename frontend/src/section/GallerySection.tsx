@@ -10,7 +10,7 @@ const GallerySection: React.FC = () => {
   return (
     <div 
       id="3" 
-      className="App-gallery-section"
+      className={ isMobile ? "App-mobile-gallery-section" : "App-gallery-section" }
       style={{
         backgroundSize: '100%',
         backgroundImage: `url(${`${process.env.PUBLIC_URL}/images/gallery_back.png`})`,

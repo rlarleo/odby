@@ -7,6 +7,8 @@ const FootSection: React.FC = () => {
   const openSeaIcon = `${process.env.PUBLIC_URL}/icons/opensea.png`
   const twitterIcon = `${process.env.PUBLIC_URL}/icons/twitter.png`
   const instaIcon = `${process.env.PUBLIC_URL}/icons/insta.png`
+  const seoulLogo = `${process.env.PUBLIC_URL}/icons/seoul.png`
+  const retro = `${process.env.PUBLIC_URL}/images/retro.png`
 
   function handleOpensea() {
     var openNewWindow = window.open("about:blank");
@@ -39,41 +41,95 @@ const FootSection: React.FC = () => {
             }}
           >
           </div>
-          <Stack direction="row">
-            <Stack sx={{ paddingRight: isMobile? '10px' : '20px' }}>
-              <div style={{ textAlign: 'left' }}>Contact Us</div>
-              <div style={{ color: 'grey', textAlign: 'left', fontSize: '10px', paddingTop: '10px' }}>
-                odby.art@gmail.com
-              </div>
+          {isMobile ? 
+            <Stack direction="row" justifyContent= "space-between" >
+              <Stack sx={{ paddingRight: '10px' }}>
+                <div style={{ textAlign: 'left' }}>Contact Us</div>
+                <div style={{ color: 'grey', textAlign: 'left', fontSize: '10px', paddingTop: '10px' }}>
+                  odby.art@gmail.com
+                </div>
+              </Stack>
+              <Stack direction="row" justifyContent= 'flex-end'>
+                <Button
+                  onClick={handleOpensea}
+                >
+                  <img
+                    src={openSeaIcon}
+                    alt=""
+                    width= "30px"
+                  />
+                </Button>
+                <Button
+                  onClick={() => window.open('https://www.twitter.com/oddbody_art')}
+                >
+                  <img
+                    src={twitterIcon}
+                    alt=""
+                    width="30px"
+                  />
+                </Button>
+                <Button
+                  onClick={() => window.open('https://www.instagram.com/oddbody.art', '_blank')}
+                >
+                  <img
+                    src={instaIcon}
+                    alt=""
+                    width="30px"
+                  />
+                </Button>
+              </Stack>
+            </Stack> 
+            : 
+            <Stack direction="row" justifyContent= 'space-between'>
+              <Stack direction="row">
+                <Stack sx={{ paddingRight: isMobile? '10px' : '20px' }}>
+                  <div style={{ textAlign: 'left' }}>Contact Us</div>
+                  <div style={{ color: 'grey', textAlign: 'left', fontSize: '10px', paddingTop: '10px' }}>
+                    odby.art@gmail.com
+                  </div>
+                </Stack>
+                <Stack direction="row">
+                  <Button
+                    onClick={handleOpensea}
+                  >
+                    <img
+                      src={openSeaIcon}
+                      alt=""
+                      width= "30px"
+                    />
+                  </Button>
+                  <Button
+                    onClick={() => window.open('https://www.twitter.com/oddbody_art')}
+                  >
+                    <img
+                      src={twitterIcon}
+                      alt=""
+                      width="30px"
+                    />
+                  </Button>
+                  <Button
+                    onClick={() => window.open('https://www.instagram.com/oddbody.art', '_blank')}
+                  >
+                    <img
+                      src={instaIcon}
+                      alt=""
+                      width="30px"
+                    />
+                  </Button>
+                </Stack>
+              </Stack>
+              <Stack direction="row" spacing={3}>
+                <img
+                  src={retro}
+                  alt=""
+                />
+                <img
+                  src={seoulLogo}
+                  alt=""
+                />
+              </Stack>
             </Stack>
-            <Button
-              onClick={handleOpensea}
-            >
-              <img
-                src={openSeaIcon}
-                alt=""
-                width= "30px"
-              />
-            </Button>
-            <Button
-              onClick={() => window.open('https://www.twitter.com/oddbody_art')}
-            >
-              <img
-                src={twitterIcon}
-                alt=""
-                width="30px"
-              />
-            </Button>
-            <Button
-              onClick={() => window.open('https://www.instagram.com/oddbody.art', '_blank')}
-            >
-              <img
-                src={instaIcon}
-                alt=""
-                width="30px"
-              />
-            </Button>
-          </Stack>
+          }
         </Stack>
       </Stack>
     </div>
