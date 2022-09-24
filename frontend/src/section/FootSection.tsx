@@ -9,6 +9,7 @@ const FootSection: React.FC = () => {
   const oddbodyLogo = `${process.env.PUBLIC_URL}/icons/oddbody_logo.png`
   const openSeaIcon = `${process.env.PUBLIC_URL}/icons/opensea.png`
   const twitterIcon = `${process.env.PUBLIC_URL}/icons/twitter.png`
+  const spatialIcon = `${process.env.PUBLIC_URL}/icons/spatial.png`
   const instaIcon = `${process.env.PUBLIC_URL}/icons/insta.png`
   const seoulLogo = `${process.env.PUBLIC_URL}/icons/seoul.png`
   const retro = `${process.env.PUBLIC_URL}/images/retro.png`
@@ -131,6 +132,15 @@ const FootSection: React.FC = () => {
                   >
                     <img
                       src={instaIcon}
+                      alt=""
+                      width="30px"
+                    />
+                  </Button>
+                  <Button
+                    onClick={() => window.open('https://spatial.io/s/ODBYs-Immersive-Place-62fcb86677f41c00017d52a9?share=5271407935954179074', '_blank')}
+                  >
+                    <img
+                      src={spatialIcon}
                       alt=""
                       width="30px"
                     />

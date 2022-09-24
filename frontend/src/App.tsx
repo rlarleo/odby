@@ -8,7 +8,6 @@ import BuySection from './section/BuySection';
 import FootSection from './section/FootSection';
 import GallerySection from './section/GallerySection';
 import TranslateButton from './component/Button/TranslateButton'
-import LinkButton from './component/Button/LinkButton'
 import { isMobile } from 'react-device-detect';
 import './App.css';
 

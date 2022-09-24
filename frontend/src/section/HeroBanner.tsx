@@ -3,6 +3,7 @@ import { Box, Stack } from '@mui/material';
 import PageLogo from '../component/Image/PageLogo';
 import { Link } from 'react-scroll';
 import { isMobile } from 'react-device-detect';
+import LinkButton from '../component/Button/LinkButton'
 
 const HeroBanner: React.FC = () => {
   const defaultFont = isMobile? 15 : 30;
@@ -72,6 +73,11 @@ const HeroBanner: React.FC = () => {
               </span>
             </Link>
           </Stack>
+          { !isMobile && 
+            <Stack  data-aos="fade-up">
+              <LinkButton />
+            </Stack>
+          }
         </Stack>
       </Box>
 
