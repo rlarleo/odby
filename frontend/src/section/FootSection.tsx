@@ -42,17 +42,26 @@ const FootSection: React.FC = () => {
             />
           </Button>
           <IconButton 
-            style={{ padding: '0px' }} 
+            style={{ padding: '0px 10px 0px 10px' }} 
             onClick={() => window.open('https://www.twitter.com/oddbody_art')}
           >
             <TwitterIcon style={{ color: 'white' }} fontSize="large" />
           </IconButton>
           <IconButton 
-            style={{ padding: '0px 4px' }} 
+            style={{ padding: '0px 0px 0px 10px' }} 
             onClick={() => window.open('https://www.instagram.com/oddbody.art', '_blank')}
           >
             <InstagramIcon style={{ color: 'white' }} fontSize="large" />
           </IconButton>
+          <Button
+            onClick={() => window.open('https://spatial.io/s/ODBYs-Immersive-Place-62fcb86677f41c00017d52a9?share=5271407935954179074', '_blank')}
+          >
+            <img
+              src={spatialIcon}
+              alt=""
+              width="30px"
+            />
+          </Button>
         </Stack>
       </Stack>
       }
