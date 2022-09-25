@@ -19,6 +19,11 @@ function App() {
     });
   }, []);
 
+  useEffect(() => {
+    if(window.location.href === 'http://oddbody.art' || window.location.href === 'http://oddbody.art/') 
+      window.location.href='https://www.oddbody.art';
+  }, []);
+
   return (
     <div className="App">
       <div className={ isMobile ? "no_fly" : "fly" }>
