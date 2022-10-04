@@ -41,7 +41,7 @@ const GallerySection: React.FC = () => {
     >
        <div className='Frame-44'>
         <div className= {isMobile ? "mobileViedo" : "textMode"}>
-          <video width={isMobile ? "230%" : "70%"} muted loop autoPlay playsInline>
+          <video width={isMobile ? "230%" : "65%"} muted loop autoPlay playsInline>
             <source src={backgroundVideo} type="video/mp4" />
           </video>
         </div>
