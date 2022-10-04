@@ -11,16 +11,19 @@ const ColorButton = styled(Button)<ButtonProps>(({ theme }) => ({
   color: '#c3ff17',
   // paddingY: 30,
   borderColor: '#c3ff17',
-  backgroundColor: 'black',  textTransform: 'none',
+  borderWidth: 'medium',
+  textTransform: 'none',
    '&:root': {
     minWidth: '200px',
   },
   '&:hover': {
-    backgroundColor: '#5d8000',
-    borderColor: '#c3ff17',
+    // backgroundColor: '#5d8000',
+    borderWidth: 'medium',
+    borderColor: '#46db55',
+    color: '#46db55',
   },
   '&:disabled': {
-    backgroundColor: '#c3ff17',
+    // backgroundColor: '#c3ff17',
     borderColor: '#c3ff17',
     color: 'black',
   },
@@ -29,77 +32,90 @@ const ColorButton = styled(Button)<ButtonProps>(({ theme }) => ({
 
 const GallerySection: React.FC = () => {
   const { t }  = useTranslation(['page']);
+  const backgroundVideo = `${process.env.PUBLIC_URL}/videos/background_video.mp4`
   return (
     <div 
       id="3" 
       className={ isMobile ? "App-mobile-gallery-section" : "App-gallery-section" }
-      style={{
-        backgroundSize: '100%',
-        backgroundImage: `url(${`${process.env.PUBLIC_URL}/images/gallery_back.gif`})`,
-        backgroundRepeat: 'no-repeat',
-        backgroundPosition: 'center'
-      }}
     >
        <div className='Frame-44'>
-        <Stack direction="column" sx={{width: isMobile ? '90vw' : '60vw'}} alignItems="center">
-       {/* {!isMobile &&
-          <Button disabled>
-            <img
-              src={oddbodyLogo}
-              alt=""
-              width= { isMobile? "40px" : "100px" }
-              style={{paddingRight: isMobile? "10px" : "30px"}}
-            />
-          </Button>
-        } */}
-        <Stack direction="row" width="100%" justifyContent="space-between">
-          <div style={{fontSize: isMobile? 60 : 80, fontWeight: 100}}>
-            +
-          </div>
-          <div style={{fontSize: isMobile? 60 : 80, fontWeight: 100}}>
-            +
-          </div>
-        </Stack>
-        <Stack width = {isMobile ? "90%" : "70%"} direction="row" justifyContent="space-between" alignItems="center">
-          <span style={{fontSize: isMobile? "64px" : "100px", fontWeight: 'bold'}}>
-            ODBY
-          </span>
-          <ButtonGroup
-            disableElevation
-            variant="outlined"
-            sx={{ color: 'white', borderColor: 'white' }}
-          >
-          <ColorButton
-            variant="outlined"
-            onClick={() => window.open('https://spatial.io/s/ODBYs-Immersive-Place-62fcb86677f41c00017d52a9?share=5271407935954179074', '_blank')}
-            sx={{ width: isMobile ? 'auto' : 200, padding: 2, margin: 1 }}
-          >
-            <div style={{fontSize: isMobile? "16px" : "24px", fontWeight: 'bold'}}>
-              {t('page:gallery.text4')}
-            </div>
-          </ColorButton> 
-          </ButtonGroup>
-        </Stack>
-        <Stack width = {isMobile ? "90%" : "70%"}  direction="row" justifyContent="space-between" alignItems="center">
-          <span style={{fontSize: isMobile? "16px" : "24px", fontWeight: 'bold', color: 'red'}}>
-            {t('page:gallery.text1')}
-          </span>
-        </Stack>
-          <span style={{fontSize: isMobile? "14px" : "16px", paddingTop: '40px'}}>
-            {t('page:gallery.text2')}
-          </span>
-          <span style={{fontSize: isMobile? "14px" : "16px", paddingTop: '20px'}}>
-            {t('page:gallery.text3')}
-          </span>
-        <Stack direction="row" width="100%" justifyContent="space-between">
-          <div style={{fontSize: isMobile? 60 : 80, fontWeight: 100}}>
-            +
-          </div>
-          <div style={{fontSize: isMobile? 60 : 80, fontWeight: 100}}>
-            +
-          </div>
-        </Stack>
-        </Stack>
+        <div className= {isMobile ? "mobileViedo" : "textMode"}>
+          <video width={isMobile ? "230%" : "70%"} muted loop autoPlay>
+            <source src={backgroundVideo} type="video/mp4" />
+          </video>
+        </div>
+        <div className="textMode">
+          <Stack direction="column" sx={{width: isMobile ? '90vw' : '60vw'}} alignItems="center">
+            {!isMobile && 
+              <Stack direction="row" width="100%" paddingBottom={isMobile? 0 : 10} justifyContent="space-between">
+                <div style={{fontSize: isMobile? 60 : 80, fontWeight: 100}}>
+                  +
+                </div>
+                <div style={{fontSize: isMobile? 60 : 80, fontWeight: 100}}>
+                  +
+                </div>
+              </Stack>
+            }
+            <Stack width = {isMobile ? "80%" : "70%"} direction="row" justifyContent="space-between" alignItems="center">
+              <span style={{fontSize: isMobile? "72px" : "100px", fontWeight: 'bold', paddingBottom: isMobile? "30px" : "0px"}}>
+                ODBY
+              </span>
+              {!isMobile && <ButtonGroup
+                disableElevation
+                variant="outlined"
+                sx={{ color: 'white', borderColor: 'white' }}
+              >
+                <ColorButton
+                  variant="outlined"
+                  onClick={() => window.open('https://spatial.io/s/ODBYs-Immersive-Place-62fcb86677f41c00017d52a9?share=5271407935954179074', '_blank')}
+                  sx={{ width: isMobile ? 'auto' : 200, padding: 2, margin: 1 }}
+                >
+                  <div style={{fontSize: isMobile? "16px" : "24px", fontWeight: 'bold'}}>
+                    {t('page:gallery.text4')}
+                  </div>
+                </ColorButton> 
+              </ButtonGroup> }
+            </Stack>
+            <Stack width = {isMobile ? "80%" : "70%"}  direction="row" justifyContent="space-between" alignItems="center">
+              <span style={{fontSize: isMobile? "16px" : "24px", fontWeight: 'bold', color: 'red'}}>
+                {t('page:gallery.text1')}
+              </span>
+              {isMobile && <ButtonGroup
+                disableElevation
+                variant="outlined"
+                sx={{ color: 'white', borderColor: 'white' }}
+              >
+                <ColorButton
+                  variant="outlined"
+                  onClick={() => window.open('https://spatial.io/s/ODBYs-Immersive-Place-62fcb86677f41c00017d52a9?share=5271407935954179074', '_blank')}
+                >
+                  <div style={{fontSize: isMobile? "16px" : "24px", fontWeight: 'bold'}}>
+                    {t('page:gallery.text4')}
+                  </div>
+                </ColorButton> 
+              </ButtonGroup>
+              }
+            </Stack>
+            <Stack width = {isMobile ? "80%" : "70%"}  sx={{ paddingBottom: isMobile? "30px" : "0px" }}>
+              <span style={{fontSize: isMobile? "10px" : "16px", paddingTop: '40px'}}>
+                {t('page:gallery.text2')}
+              </span>
+              <span style={{fontSize: isMobile? "10px" : "16px", paddingTop: '20px'}}>
+                {t('page:gallery.text3')}
+              </span>
+            </Stack>
+            {!isMobile && 
+              <Stack direction="row" width="100%" paddingTop={isMobile? 0 : 10} justifyContent="space-between">
+                <div style={{fontSize: isMobile? 60 : 80, fontWeight: 100}}>
+                  +
+                </div>
+                <div style={{fontSize: isMobile? 60 : 80, fontWeight: 100}}>
+                  +
+                </div>
+              </Stack>
+            }
+          </Stack>
+        </div>
       </div>
     </div >
   );
