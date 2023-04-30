@@ -37,8 +37,14 @@ const IntroSection: React.FC = () => {
               {t('page:intro.header')}
             </h4>
             <span className="ODBYODD-BODY-OD">
-              {t('page:intro.content')}
+              {t('page:intro.content1')} <br />
+              {t('page:intro.content2')} <br />
+              {t('page:intro.content3')} <br />
+              {t('page:intro.content4')} <br />
+              {t('page:intro.content5')} <br />
+              {t('page:intro.content6')}
             </span>
+           
         </Stack>
       </Stack>
     </div>

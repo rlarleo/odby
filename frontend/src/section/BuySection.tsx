@@ -12,7 +12,7 @@ const BuySection: React.FC = () => {
   function handleOpensea() {
     var openNewWindow = window.open("about:blank");
     if(openNewWindow)
-      openNewWindow.location.href = "https://opensea.io/ODBY";
+      openNewWindow.location.href = "https://opensea.io/collection/odby";
   }
 
   return (

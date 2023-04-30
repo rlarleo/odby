@@ -108,12 +108,23 @@ const VideoSection: React.FC = () => {
         backgroundRepeat: 'no-repeat'
       }}
     >
+      <Stack
+        sx={{px: isMobile? 5 : 10, minWidth: isMobile? 'auto' : '850px', width: isMobile? '80vw' : '50vw' }}
+      >
+        <span 
+          className="-ODBYODD-BODY-VIDEO-"
+          style={{paddingBottom: 10}}
+        >
+          <span>{t('page:video.content')}</span>
+        </span>
+      </Stack>
       <Box
         sx={{
           display: 'flex',
           flexWrap: 'wrap',
           borderRadius: '12px',
-          padding: isMobile? 0 : 15
+          paddingX: isMobile? 0 : 15,
+          paddingBottom: isMobile? 5 : 15
         }}
       >
         <Box 
@@ -128,7 +139,6 @@ const VideoSection: React.FC = () => {
             {datas.map(data => {
               return (
                 <Box
-                  // width= "80% !important"
                   justifyContent="center"
                   alignItems="center"
                   sx={{
@@ -192,16 +202,14 @@ const VideoSection: React.FC = () => {
                       </Stack> :
                       <Stack direction="row" flex={1}>
                         <Stack flex={1.5}>
-                        <div className="outer">
-                            {/* <div style={{height: isMobile? '20px' : '50px', backgroundColor: 'white'}} /> */}
-                              <img
-                                ref={targetRef}
-                                src={data.video} 
-                                width='100%' 
-                                max-width='100%' 
-                                height='auto'  
-                              />
-                            {/* <div style={{height: isMobile? '20px' : '50px', backgroundColor: 'white'}} /> */}
+                          <div className="outer">
+                            <img
+                              ref={targetRef}
+                              src={data.video} 
+                              width='100%' 
+                              max-width='100%' 
+                              height='auto'  
+                            />
                           </div>
                           </Stack>
                         <Stack
