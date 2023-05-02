@@ -11,8 +11,8 @@ const IntroSection: React.FC = () => {
     <div id="1" className="App-section" >
       <Stack
         direction={isMobile? "column" : "row"}
-        spacing={isMobile? 3 : -5}
-        sx={{padding: isMobile? 5 : 10}}
+        spacing={isMobile? 1 : -5}
+        sx={{paddingX: isMobile? 5 : 10, paddingBottom: isMobile? 5 : 10, paddingTop: isMobile? 0 : 10}}
       >
         <Box
           data-aos={isMobile ? "fade-up" : "fade-right"}
@@ -44,7 +44,6 @@ const IntroSection: React.FC = () => {
               {t('page:intro.content5')} <br />
               {t('page:intro.content6')}
             </span>
-           
         </Stack>
       </Stack>
     </div>

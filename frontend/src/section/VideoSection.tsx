@@ -113,7 +113,7 @@ const VideoSection: React.FC = () => {
       >
         <span 
           className="-ODBYODD-BODY-VIDEO-"
-          style={{paddingBottom: 10}}
+          style={{paddingBottom: 5}}
         >
           <span>{t('page:video.content')}</span>
         </span>
@@ -124,7 +124,7 @@ const VideoSection: React.FC = () => {
           flexWrap: 'wrap',
           borderRadius: '12px',
           paddingX: isMobile? 0 : 15,
-          paddingBottom: isMobile? 5 : 15
+          paddingBottom: isMobile? 5 : 0
         }}
       >
         <Box 
