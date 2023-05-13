@@ -42,7 +42,8 @@ const IntroSection: React.FC = () => {
               {t('page:intro.content3')} <br />
               {t('page:intro.content4')} <br />
               {t('page:intro.content5')} <br />
-              {t('page:intro.content6')}
+              {t('page:intro.content6')} <br />
+              {t('page:intro.content7')}
             </span>
         </Stack>
       </Stack>
