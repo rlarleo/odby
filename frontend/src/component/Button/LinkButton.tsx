@@ -49,7 +49,7 @@ const TranslateButton: React.FC = () => {
         />
       </Button>
       <Button
-        onClick={() => window.open('https://spatial.io/s/ODBYs-Immersive-Place-62fcb86677f41c00017d52a9?share=5271407935954179074', '_blank')}
+        onClick={() => window.open('https://www.spatial.io/s/ODBYs-Hi-Fi-Space-6448b78b4ed63407fd6fe82c?share=5487205696407549449', '_blank')}
       >
         <img
           src={spatialIcon}

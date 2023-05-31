@@ -68,7 +68,7 @@ const GallerySection: React.FC = () => {
               >
                 <ColorButton
                   variant="outlined"
-                  onClick={() => window.open('https://spatial.io/s/ODBYs-Immersive-Place-62fcb86677f41c00017d52a9?share=5271407935954179074', '_blank')}
+                  onClick={() => window.open('https://www.spatial.io/s/ODBYs-Hi-Fi-Space-6448b78b4ed63407fd6fe82c?share=5487205696407549449', '_blank')}
                   sx={{ width: isMobile ? 'auto' : 200, padding: 2, margin: 1 }}
                 >
                   <div style={{fontSize: isMobile? "16px" : "24px", fontWeight: 'bold'}}>
@@ -88,7 +88,7 @@ const GallerySection: React.FC = () => {
               >
                 <ColorButton
                   variant="outlined"
-                  onClick={() => window.open('https://spatial.io/s/ODBYs-Immersive-Place-62fcb86677f41c00017d52a9?share=5271407935954179074', '_blank')}
+                  onClick={() => window.open('https://www.spatial.io/s/ODBYs-Hi-Fi-Space-6448b78b4ed63407fd6fe82c?share=5487205696407549449', '_blank')}
                 >
                   <div style={{fontSize: isMobile? "16px" : "24px", fontWeight: 'bold'}}>
                     {t('page:gallery.text4')}
