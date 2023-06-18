@@ -9,6 +9,7 @@ import TableContainer from '@mui/material/TableContainer';
 import TableHead from '@mui/material/TableHead';
 import TableRow from '@mui/material/TableRow';
 import Paper from '@mui/material/Paper';
+import Stack from '@mui/material/Stack';
 import { useTranslation } from 'react-i18next';
 import { useNavigate } from 'react-router-dom';
 import { isMobile } from 'react-device-detect';
@@ -35,40 +36,40 @@ const NoticeSection: React.FC = () => {
       className="App-Notice-section"
       style={{ paddingBottom: 50 }}
     >
-    <TableContainer style={{width: isMobile ? '80%' : '50%', backgroundColor: 'transparent'}} component={Paper}>
-      <Table sx={{ minWidth: 650 }} aria-label="simple table">
-        <TableHead>
-          <TableRow>
-            <TableCell style= {{color: 'white'}}>
-              <Typography variant="h4">
-                {t('page:notice.index')}
-              </Typography>
-            </TableCell>
-            <TableCell />
-          </TableRow>
-        </TableHead>
-        <TableBody>
-          {rows.map((row) => (
-            <TableRow
-              onClick={() => navigate(`/notice`)}
-              key={row.title}
-              sx={{ 
-                '&:last-child td, &:last-child th': { border: 0 },
-                '&:hover': {
-                  backgroundColor: 'darkgray',
-                  cursor: 'pointer',}
-               }}
-            >
-              <TableCell style= {{color: 'white'}} component="th" scope="row">
-                {row.title}
-              </TableCell>
-              <TableCell style= {{color: 'white'}} align="right">{row.date}</TableCell>
-            </TableRow>
-          ))}
-            <TableRow />
-        </TableBody>
-      </Table>
-    </TableContainer>
+        <TableContainer style={{width: isMobile ? '80%' : '57%', backgroundColor: 'transparent', padding: 150 }} component={Paper}>
+          <Table sx={{ minWidth: 650 }} aria-label="simple table">
+            <TableHead>
+              <TableRow>
+                <TableCell style= {{color: 'white'}}>
+                  <Typography variant="h4">
+                    {t('page:notice.index')}
+                  </Typography>
+                </TableCell>
+                <TableCell />
+              </TableRow>
+            </TableHead>
+            <TableBody>
+              {rows.map((row) => (
+                <TableRow
+                  onClick={() => navigate(`/notice`)}
+                  key={row.title}
+                  sx={{ 
+                    '&:last-child td, &:last-child th': { border: 0 },
+                    '&:hover': {
+                      backgroundColor: 'darkgray',
+                      cursor: 'pointer',}
+                  }}
+                >
+                  <TableCell style= {{color: 'white'}} component="th" scope="row">
+                    {row.title}
+                  </TableCell>
+                  <TableCell style= {{color: 'white'}} align="right">{row.date}</TableCell>
+                </TableRow>
+              ))}
+                <TableRow />
+            </TableBody>
+          </Table>
+        </TableContainer>
     </div >
   );
 };

@@ -1,5 +1,5 @@
 import React, { useEffect, useState } from 'react';
-import { Box, Grid, Stack } from '@mui/material';
+import { Box, Button, Grid, Stack } from '@mui/material';
 import { isMobile } from 'react-device-detect';
 import styled from 'styled-components';
 import ArrowBackIosNewIcon from '@mui/icons-material/ArrowBackIosNew';
@@ -23,7 +23,8 @@ const StyledAnnouncement = styled.div`
 `;
 
 const NoticePage = () => {
-  const downloadUrl = `${process.env.REACT_APP_PUBLIC_URL}/excel/설비등록양식.xlsx`;
+  const downloadUrl1 = `${process.env.PUBLIC_URL}/application/2023년 ODBY 예술 X 기술 R&D과정모집.docx`;
+  const downloadUrl2 = `${process.env.PUBLIC_URL}/application/2023년 ODBY 예술 X 기술 R&D과정모집.hwp`;
   const navigate = useNavigate();
 
   useEffect(() => {
@@ -50,20 +51,21 @@ const NoticePage = () => {
               <Box
                 sx={{
                   width: isMobile ? '90%' : '60%',
-                  height: isMobile ? '100vh' : '130vh',
+                  height: isMobile ? '90vh' : '130vh',
                   backgroundSize: '100%',
-                  backgroundImage: `url(${`${process.env.PUBLIC_URL}/images/notice1.jpeg`})`,
+                  backgroundImage: `url(${`${process.env.PUBLIC_URL}/images/notice1.png`})`,
                   backgroundRepeat: 'no-repeat',
                   verticalAlign: 'middle'
                 }}
               >
               </Box>
             </Stack>
-            <Stack sx={{ paddingX: isMobile ? 2: 20 }}>
+            <Stack sx={{ paddingX: isMobile ? 2 : 20 }}>
 
-              <h2>공모 안내</h2>
+              <h2>공모내용</h2>
               <p>‘한국예술종합학교 – 예컨대 프로젝트’의 일환으로 ODBY의 R&D과정 인원을 모집합니다.</p>
-              <p>예술과 기술 융합을 통한 사업 방향성과 예술 활동을 연구하는 과정입니다. 다양한 아이디어를 가지고 프로젝트 구체화 연구 과정을 진행할 지원자분들을 기다립니다.</p>
+              <p>예술과 기술 융합을 통한 사업 방향성과 예술 활동을 연구하는 과정입니다.</p>
+              <p>다양한 아이디어를 가지고 프로젝트 구체화 연구 과정을 진행할 지원자분들을 기다립니다.</p>
 
               <h3>사업 활동 예시</h3>
               <ul>
@@ -97,6 +99,31 @@ const NoticePage = () => {
                 <li>첨부파일 – 개인, 단체 포트폴리오 및 추가자료(해당시)</li>
               </ul>
               <p>지원신청서 제목: 2023 ODBY R&amp;D 과정 지원신청서 _(개인/단체명)</p>
+              <p>접수방법 : 이메일 접수 (odby.art@gmail.com)</p>
+              <p>문의 : 010.2351.9954 odby.art@gmail.com</p>
+              <p>지원서 다운로드</p>
+              <Stack direction="row" spacing={2}>
+                <Button
+                  component="a"
+                  href={downloadUrl1}
+                  download
+                  variant="contained"
+                  color="info"
+                  sx={{textTransform: 'none'}}
+                >
+                  지원신청서.docx 다운로드
+                </Button>
+                <Button
+                  component="a"
+                  href={downloadUrl2}
+                  download
+                  variant="contained"
+                  color="success"
+                  sx={{textTransform: 'none'}}
+                >
+                  지원신청서.hwp 다운로드
+                </Button>
+              </Stack>
             </Stack>
           </Stack>
         </StyledAnnouncement>

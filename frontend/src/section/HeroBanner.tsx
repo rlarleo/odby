@@ -45,7 +45,7 @@ const HeroBanner: React.FC = () => {
             width: '100%',
           }}
         >
-          <Stack direction={isMobile? "column" : "row"} spacing={isMobile? 5 : 20} sx={{ p: isMobile? 0 : 10 }}>
+          <Stack direction={isMobile? "column" : "row"} spacing={isMobile? 4 : 20} sx={{ p: isMobile? 0 : 10 }}>
             <Link to="1" spy={true} smooth={true} data-aos="fade-left">
               <span 
                 onMouseEnter={() => setAboutUs(hoverFont)}

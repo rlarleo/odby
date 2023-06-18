@@ -12,7 +12,7 @@ const IntroSection: React.FC = () => {
       <Stack
         direction={isMobile? "column" : "row"}
         spacing={isMobile? 1 : -5}
-        sx={{paddingX: isMobile? 5 : 10, paddingBottom: isMobile? 5 : 10, paddingTop: isMobile? 0 : 10}}
+        sx={{paddingX: isMobile? 5 : 10, paddingBottom: isMobile? 5 : 10, paddingTop: isMobile? 5 : 10}}
       >
         <Box
           data-aos={isMobile ? "fade-up" : "fade-right"}
