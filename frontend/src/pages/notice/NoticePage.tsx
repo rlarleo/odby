@@ -111,7 +111,7 @@ const NoticePage = () => {
                   color="info"
                   sx={{textTransform: 'none'}}
                 >
-                  지원신청서.docx 다운로드
+                  지원신청서.docx
                 </Button>
                 <Button
                   component="a"
@@ -121,7 +121,7 @@ const NoticePage = () => {
                   color="success"
                   sx={{textTransform: 'none'}}
                 >
-                  지원신청서.hwp 다운로드
+                  지원신청서.hwp
                 </Button>
               </Stack>
             </Stack>

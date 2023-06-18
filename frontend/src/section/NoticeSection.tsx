@@ -36,7 +36,7 @@ const NoticeSection: React.FC = () => {
       className="App-Notice-section"
       style={{ paddingBottom: 50 }}
     >
-        <TableContainer style={{width: isMobile ? '80%' : '57%', backgroundColor: 'transparent', padding: 150 }} component={Paper}>
+        <TableContainer style={{width: isMobile ? '80%' : '57%', backgroundColor: 'transparent', padding: isMobile? 0 : 150 }} component={Paper}>
           <Table sx={{ minWidth: 650 }} aria-label="simple table">
             <TableHead>
               <TableRow>
