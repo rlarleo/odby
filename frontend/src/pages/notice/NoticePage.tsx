@@ -23,7 +23,7 @@ const StyledAnnouncement = styled.div`
 `;
 
 const NoticePage = () => {
-  const downloadUrl1 = `${process.env.PUBLIC_URL}/application/2023년 ODBY 예술 X 기술 R&D과정모집.docx`;
+  const downloadUrl1 = `${process.env.PUBLIC_URL}/application/test.docx`;
   const downloadUrl2 = `${process.env.PUBLIC_URL}/application/2023년 ODBY 예술 X 기술 R&D과정모집.hwp`;
   const navigate = useNavigate();
 
@@ -31,6 +31,7 @@ const NoticePage = () => {
     window.scrollTo(0, 0); // 컴포넌트가 마운트될 때 페이지의 제일 위로 스크롤 이동
   }, []);
   console.log(downloadUrl1);
+  
 
   
   return (
