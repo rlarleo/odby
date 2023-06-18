@@ -11,6 +11,7 @@ const HeroBanner: React.FC = () => {
   const [aboutUs, setAboutUs] = useState(defaultFont);
   const [videoList, setVideoList] = useState(defaultFont);
   const [ourGallery, setOurGallery] = useState(defaultFont);
+  const [notice, setNotice] = useState(defaultFont);
 
   return (
     <div className="App-section">
@@ -45,7 +46,7 @@ const HeroBanner: React.FC = () => {
           }}
         >
           <Stack direction={isMobile? "column" : "row"} spacing={isMobile? 5 : 20} sx={{ p: isMobile? 0 : 10 }}>
-            <Link to="1" spy={true} smooth={true} data-aos="fade-right">
+            <Link to="1" spy={true} smooth={true} data-aos="fade-left">
               <span 
                 onMouseEnter={() => setAboutUs(hoverFont)}
                 onMouseLeave={() => setAboutUs(defaultFont)}
@@ -54,7 +55,7 @@ const HeroBanner: React.FC = () => {
                 About Us
               </span>
             </Link>
-            <Link to="2" spy={true} smooth={true} data-aos="fade-up">
+            <Link to="2" spy={true} smooth={true} data-aos="fade-left">
               <span 
                 onMouseEnter={() => setVideoList(hoverFont)}
                 onMouseLeave={() => setVideoList(defaultFont)}
@@ -70,6 +71,15 @@ const HeroBanner: React.FC = () => {
                 style={{ fontSize: ourGallery, cursor: 'pointer', fontWeight: 'bold' }}
               >
                 Our Gallery
+              </span>
+            </Link>
+            <Link to="4" spy={true} smooth={true} data-aos="fade-left">
+              <span 
+                onMouseEnter={() => setNotice(hoverFont)}
+                onMouseLeave={() => setNotice(defaultFont)}
+                style={{ fontSize: notice, cursor: 'pointer', fontWeight: 'bold' }}
+              >
+                Notice
               </span>
             </Link>
           </Stack>
