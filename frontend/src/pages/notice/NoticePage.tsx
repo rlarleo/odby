@@ -30,6 +30,7 @@ const NoticePage = () => {
   useEffect(() => {
     window.scrollTo(0, 0); // 컴포넌트가 마운트될 때 페이지의 제일 위로 스크롤 이동
   }, []);
+  console.log(downloadUrl1);
 
   
   return (
