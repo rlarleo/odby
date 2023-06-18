@@ -34,7 +34,6 @@ const NoticePage = () => {
   return (
       <div className='App-notice'>
         <StyledAnnouncement>
-          
           <Stack sx= {{ marginX: isMobile? 0 : 30, paddingY: isMobile? 5 : 10, backgroundColor: 'black' }}>
           <Stack
             onClick={() => navigate(`/`)}
