@@ -23,8 +23,8 @@ const StyledAnnouncement = styled.div`
 `;
 
 const NoticePage = () => {
-  const downloadUrl1 = `${process.env.PUBLIC_URL}/application/2023년_ODBY_예술_X_기술_R&D과정모집.docx`;
-  const downloadUrl2 = `${process.env.PUBLIC_URL}/application/2023년_ODBY_예술_X_기술_R&D과정모집.hwp`;
+  const downloadUrl1 = `${process.env.PUBLIC_URL}/application/2023년ODBY예술X기술R&D과정모집.docx`;
+  const downloadUrl2 = `${process.env.PUBLIC_URL}/application/2023년ODBY예술X기술R&D과정모집.hwp`;
   const navigate = useNavigate();
 
   useEffect(() => {
@@ -100,7 +100,7 @@ const NoticePage = () => {
                 <li>개인정보 수집동의서(별첨 1)</li>
                 <li>첨부파일 – 개인, 단체 포트폴리오 및 추가자료(해당시)</li>
               </ul>
-              <p>지원신청서 제목: 2023 ODBY R&amp;D 과정 지원신청서 _(개인/단체명)</p>
+              <p>지원신청서 제목: 2023ODBYR&amp;D과정지원신청서_(개인/단체명)</p>
               <p>접수방법 : 이메일 접수 (odby.art@gmail.com)</p>
               <p>문의 : 010.2351.9954 odby.art@gmail.com</p>
               <p>지원서 다운로드</p>
