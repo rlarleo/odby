@@ -23,8 +23,8 @@ const StyledAnnouncement = styled.div`
 `;
 
 const NoticePage = () => {
-  const downloadUrl1 = `${process.env.PUBLIC_URL}/application/2023년_ODBY_예술_X_기술_R&D_과정모집.docx`;
-  const downloadUrl2 = `${process.env.PUBLIC_URL}/application/2023년_ODBY_예술_X_기술_R&D_과정모집.hwp`;
+  const downloadUrl1 = `${process.env.PUBLIC_URL}/application/2023_ODBY_R&D과정_지원신청서_(신청자명).docx`;
+  const downloadUrl2 = `${process.env.PUBLIC_URL}/application/2023_ODBY_R&D과정_지원신청서_(신청자명).hwp`;
   const navigate = useNavigate();
 
   useEffect(() => {
