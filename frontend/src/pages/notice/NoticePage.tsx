@@ -55,7 +55,7 @@ const NoticePage = () => {
                   width: isMobile ? '90%' : '60%',
                   height: isMobile ? '90vh' : '130vh',
                   backgroundSize: '100%',
-                  backgroundImage: `url(${`${process.env.PUBLIC_URL}/images/notice1.png`})`,
+                  backgroundImage: `url(${`${process.env.PUBLIC_URL}/images/notice.jpeg`})`,
                   backgroundRepeat: 'no-repeat',
                   verticalAlign: 'middle'
                 }}
