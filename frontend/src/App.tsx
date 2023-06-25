@@ -4,6 +4,7 @@ import './App.css';
 import { BrowserRouter, Route, Routes } from 'react-router-dom';
 import NoticePage from './pages/notice/NoticePage';
 import RootPage from './pages/root/RootPage';
+import QnAPage from './pages/qna/QnAPage';
 
 function App() {
   useEffect(() => {
@@ -16,6 +17,7 @@ function App() {
       <Routes>
         <Route path="/" element={<RootPage />} />
         <Route path="/notice" element={<NoticePage />} />
+        <Route path="/qna" element={<QnAPage />} />
       </Routes>
     </BrowserRouter>
   );

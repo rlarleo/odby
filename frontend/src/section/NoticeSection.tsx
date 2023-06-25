@@ -18,12 +18,14 @@ import { isMobile } from 'react-device-detect';
 function createData(
   title: string,
   date: string,
+  link: string,
 ) {
-  return { title, date };
+  return { title, date, link };
 }
 
 const rows = [
-  createData('2023 ODBY 예술 X 기술 R&D 과정 공고', '2023. 6. 19.'),
+  createData('예술과 기술 R&D과정 Q&A', '2023. 6. 25.', '/qna'),
+  createData('2023 ODBY 예술 X 기술 R&D 과정 공고', '2023. 6. 19.', '/notice'),
 ];
 
 const NoticeSection: React.FC = () => {
@@ -51,7 +53,7 @@ const NoticeSection: React.FC = () => {
             <TableBody>
               {rows.map((row) => (
                 <TableRow
-                  onClick={() => navigate(`/notice`)}
+                  onClick={() => navigate(row.link)}
                   key={row.title}
                   sx={{ 
                     '&:last-child td, &:last-child th': { border: 0 },
