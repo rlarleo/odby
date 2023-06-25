@@ -38,6 +38,8 @@ const QnAPage = () => {
     '/images/QnA/005.jpg',
     '/images/QnA/006.jpg',
     '/images/QnA/007.jpg',
+    '/images/QnA/008.jpg',
+    '/images/QnA/009.jpg',
   ];
 
   
@@ -57,11 +59,13 @@ const QnAPage = () => {
             </Stack>
             <div>
               {images.map((src, index) => (
+                <div style={{paddingBottom: 40}}>
                 <img 
-                  style={{width: isMobile ? '80vw' : '45vw', paddingBottom: 30}}
+                  style={{width: isMobile ? '80vw' : '35vw', margin:'0 10vw 0 10vw'}}
                   key={index} src={`${process.env.PUBLIC_URL}${src}`} 
                   alt={`images/00${index + 1}`} 
                 />
+                </div>
               ))}
             </div>
           

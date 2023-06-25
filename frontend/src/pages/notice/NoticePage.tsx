@@ -50,17 +50,11 @@ const NoticePage = () => {
               <ArrowBackIosNewIcon />
             </Stack>
             <Stack sx={{ alignItems: 'center'}}>
-              <Box
-                sx={{
-                  width: isMobile ? '90%' : '60%',
-                  height: isMobile ? '90vh' : '130vh',
-                  backgroundSize: '100%',
-                  backgroundImage: `url(${`${process.env.PUBLIC_URL}/images/notice.jpeg`})`,
-                  backgroundRepeat: 'no-repeat',
-                  verticalAlign: 'middle'
-                }}
-              >
-              </Box>
+              <img 
+                  style={{width: isMobile ? '80vw' : '50vw', paddingBottom: 30}}
+                  key='key' src={`${process.env.PUBLIC_URL}/images/notice.jpeg`} 
+                  alt={`imagea`} 
+                />
             </Stack>
             <Stack sx={{ paddingX: isMobile ? 2 : 20 }}>
 
