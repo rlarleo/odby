@@ -31,13 +31,13 @@ const QnAPage = () => {
   }, []);
   console.log(downloadUrl1);
   const images = [
-    '/images/qna/001.jpg',
-    '/images/qna/002.jpg',
-    '/images/qna/003.jpg',
-    '/images/qna/004.jpg',
-    '/images/qna/005.jpg',
-    '/images/qna/006.jpg',
-    '/images/qna/007.jpg',
+    '/images/QnA/001.jpg',
+    '/images/QnA/002.jpg',
+    '/images/QnA/003.jpg',
+    '/images/QnA/004.jpg',
+    '/images/QnA/005.jpg',
+    '/images/QnA/006.jpg',
+    '/images/QnA/007.jpg',
   ];
 
   
