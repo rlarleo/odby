@@ -1,7 +1,6 @@
 .App {
   text-align: center;
   background-color: #000000;
-
 }
 
 .App-logo {
@@ -174,11 +173,11 @@
   -webkit-transform: translateZ(0);
 }
 .video {
-position: relative;
-left: 0;
-top: 0;
-z-index: 1;
-opacity: 1;
+  position: relative;
+  left: 0;
+  top: 0;
+  z-index: 1;
+  opacity: 1;
 }
 
 .hide-scroll {
@@ -211,7 +210,7 @@ opacity: 1;
   width: 100%;
   top: 50%;
   left: auto;
-  transform: translate(-50%,-50%);
+  transform: translate(-50%, -50%);
 }
 
 .textMode {
@@ -220,13 +219,13 @@ opacity: 1;
   width: 100%;
   top: 50%;
   left: 50%;
-  transform: translate(-50%,-50%);
+  transform: translate(-50%, -50%);
 }
 
 .ticket_img {
   filter: brightness(1);
   filter: hue-rotate(180deg);
-} 
+}
 .ticket_img:hover {
   filter: hue-rotate(180deg);
   /* #bird-03 { filter: invert(100%); } */
@@ -234,8 +233,8 @@ opacity: 1;
 }
 
 .ODBY-ODD-BODY-ODBY-Open-Sea-Ticket---ODBY-NFT--- {
-  text-shadow: -1px 0 #000,	       0 1px #000,	       1px 0 #000,	       0 -1px #000;
-  letter-spacing:6px;
+  text-shadow: -1px 0 #000, 0 1px #000, 1px 0 #000, 0 -1px #000;
+  letter-spacing: 6px;
   font-weight: 700;
 }
 
@@ -279,7 +278,18 @@ opacity: 1;
   display: flex;
   text-align: center;
 }
-  
+
+.App-announcement {
+  background-color: rgb(32, 59, 59);
+  display: flex;
+  min-height: 100vh;
+  flex-direction: column;
+  justify-content: center;
+  color: white;
+  display: flex;
+  text-align: center;
+}
+
 @keyframes App-logo-spin {
   from {
     transform: rotate(0deg);
