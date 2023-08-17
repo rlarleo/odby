@@ -8,13 +8,13 @@ import QnAPage from "./pages/qna/QnAPage";
 import AnnouncementPage from "./pages/announcement/AnnouncementPage";
 
 function App() {
-  useEffect(() => {
-    if (
-      window.location.href === "http://oddbody.art" ||
-      window.location.href === "http://oddbody.art/"
-    )
-      window.location.href = "https://www.oddbody.art";
-  }, []);
+  // useEffect(() => {
+  //   if (
+  //     window.location.href === "http://oddbody.art" ||
+  //     window.location.href === "http://oddbody.art/"
+  //   )
+  //     window.location.href = "https://www.oddbody.art";
+  // }, []);
 
   return (
     <BrowserRouter>
